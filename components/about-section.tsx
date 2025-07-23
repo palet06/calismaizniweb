@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-28 items-center justify-end ">
           <div>
             <Image
               src="/turkiye-1.png"
