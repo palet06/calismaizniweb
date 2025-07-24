@@ -110,13 +110,13 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-gray-100 py-2">
+      <div className="bg-blue-900 py-2 border-b-[1px] border-b-slate-600">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-1">
             <Button
               variant={activeMode === "workers" ? "default" : "ghost"}
-              className={`px-6 py-2 text-sm font-medium ${
-                activeMode === "workers" && "bg-[#155DFC]/70 hover:bg-[#155DFC]"
+              className={`px-6 py-2 text-sm font-medium text-black hover:bg-teal-200 ${
+                activeMode === "workers" ? "bg-teal-100/95 hover:bg-teal-200":"text-slate-400"
               }`}
               onClick={() => setActiveMode("workers")}
             >
@@ -124,9 +124,9 @@ export default function Header() {
             </Button>
             <Button
               variant={activeMode === "employers" ? "default" : "ghost"}
-              className={`px-6 py-2 text-sm font-medium ${
-                activeMode === "employers" &&
-                "bg-[#155DFC]/70 hover:bg-[#155DFC]"
+              className={`px-6 py-2 text-sm font-medium text-black  hover:bg-teal-200 ${
+                activeMode === "employers" ?
+                "bg-teal-100/95 hover:bg-teal-200":"text-slate-400"
               }`}
               onClick={() => setActiveMode("employers")}
             >
@@ -135,11 +135,11 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-50  border-b border-blue-800 bg-blue-900 text-white">
         {/* Top toggle buttons */}
 
         {/* Main header */}
-        <div className="border-b border-gray-200 ">
+        <div className=" border-gray-200 ">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               {/* Logo section */}
@@ -154,9 +154,9 @@ export default function Header() {
                       priority
                     />
                   </div>
-                  <div className="border-l-4 border-gray-200 pl-3">
-                    <div className="text-sm font-bold text-gray-900">T.C.</div>
-                    <div className="text-xs text-gray-800">
+                  <div className="border-l-4 border-slate-600 pl-3">
+                    <div className="text-xl font-bold text-white">T.C.</div>
+                    <div className="text-lg text-white">
                       Çalışma ve Sosyal Güvenlik Bakanlığı
                     </div>
                   </div>
@@ -167,16 +167,16 @@ export default function Header() {
               <div className="flex items-center space-x-6">
                 {/* Contact icons */}
                 <div className="hidden md:flex items-center space-x-4">
-                  <Button variant="ghost" size="sm" className="p-2">
-                    <Mail className="w-5 h-5 text-blue-600" />
+                  <Button variant="ghost" size="sm" className="p-2 text-white  hover:text-blue-800">
+                    <Mail className="w-5 h-5 " />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2">
-                    <Phone className="w-5 h-5 text-blue-600" />
+                  <Button variant="ghost" size="sm" className="p-2t text-white  hover:text-blue-800">
+                    <Phone className="w-5 h-5 " />
                   </Button>
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-blue-600 hover:text-blue-800"
+                    className="text-white hover:text-blue-800"
                   >
                     SSS
                   </Button>
@@ -186,11 +186,11 @@ export default function Header() {
                   <div className="relative">
                     <Input
                       placeholder="Konu ara..."
-                      className="w-64 pr-12 border-gray-300"
+                      className="w-64 pr-12 border-slate-400"
                     />
                     <Button
                       size="sm"
-                      className="absolute right-0 top-0 h-full px-3 bg-blue-600 hover:bg-blue-700"
+                      className="absolute right-0 top-0 h-full px-3 bg-transparent hover:bg-blue-600"
                     >
                       <Search className="w-4 h-4" />
                     </Button>
@@ -198,7 +198,7 @@ export default function Header() {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-2 text-sm">
-                  <span className="font-bold text-blue-600 border-b-2 border-blue-600 pb-1">
+                  <span className="font-bold text-white/75 border-b-2 border-white/75 pb-1">
                     TR
                   </span>
                   <span className="text-gray-500 hover:text-blue-600 cursor-pointer">
@@ -211,23 +211,23 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="bg-white border-b border-gray-200 shadow-sm ">
+        <nav className="bg-blue-900  border-gray-200 shadow-sm">
           <div className="container mx-auto px-4 ">
-            <div className="relative flex items-center justify-between py-3 ">
+            <div className="py-3 ">
               <NavigationMenu
                 viewport={false}
-                className=" font-[400] text-3xl tracking-wide leading-7 "
+                className=" font-[400] text-3xl tracking-wide leading-7 w-full  "
               >
-                <NavigationMenuList>
-                  <NavigationMenuItem>
+                <NavigationMenuList className="flex gap-10 w-full">
+                  <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="">
-                        <Home className="size-5" />
+                      <Link href="/" className=" hover:bg-white hover:text-black ">
+                        <Home className="size-5 hover:text-black" />
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="cursor-pointer">
+                  <NavigationMenuItem    >
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900">
                       İlgili Kanunlar
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">
@@ -244,8 +244,8 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="cursor-pointer">
+                  <NavigationMenuItem >
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900">
                       İlgili Yönetmelikler
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">
@@ -262,42 +262,29 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger>List</NavigationMenuTrigger>
-                    <NavigationMenuContent className="z-20">
-                      <ul className="grid w-[300px] gap-4">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">
-                              <div className="font-medium">Components</div>
-                              <div className="text-muted-foreground">
-                                Browse all components in the library.
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">
-                              <div className="font-medium">Documentation</div>
-                              <div className="text-muted-foreground">
-                                Learn how to use the library.
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">
-                              <div className="font-medium">Blog</div>
-                              <div className="text-muted-foreground">
-                                Read our latest blog posts.
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
+                 
+                  <NavigationMenuItem >
+                    <NavigationMenuLink asChild>
+                      <Link href="#tech" className=" hover:bg-white hover:text-black ">
+                       TECHVISA
+                      </Link>
+                    </NavigationMenuLink>
+                   
                   </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                   <NavigationMenuItem >
+                     <NavigationMenuLink asChild>
+                      <Link href="/" className=" hover:bg-white hover:text-black">
+                       Değerlendirme Kriterleri
+                      </Link>
+                    </NavigationMenuLink>
+                    
+                  </NavigationMenuItem>
+                  <NavigationMenuItem >
+                    <NavigationMenuLink asChild>
+                      <Link href="/" className=" hover:bg-white hover:text-black">
+                       İzin Şerhleri
+                      </Link>
+                    </NavigationMenuLink>
                     <NavigationMenuContent>
                       <ul className="grid w-[200px] gap-4">
                         <li>
@@ -314,8 +301,12 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
+                  <NavigationMenuItem >
+                    <NavigationMenuLink asChild>
+                      <Link href="/" className=" hover:bg-white hover:text-black">
+                       Kısıtlamalar
+                      </Link>
+                    </NavigationMenuLink>
                     <NavigationMenuContent>
                       <ul className="grid w-[200px] gap-4">
                         <li>

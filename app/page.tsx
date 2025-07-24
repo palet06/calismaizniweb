@@ -15,7 +15,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
+        
+
         <ServicesSection />
+        
         <ApplicationsSection />
         <GuidesSection />
         <NewsSection />
