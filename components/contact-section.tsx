@@ -1,14 +1,18 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactSection() {
   return (
     <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">İletişim ve Destek</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Sorularınız için bizimle iletişime geçin</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            İletişim ve Destek
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Sorularınız için bizimle iletişime geçin
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -21,7 +25,11 @@ export default function ContactSection() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-2">Çağrı Merkezi</p>
-              <p className="font-semibold text-blue-600">444 0 123</p>
+              <p className="font-semibold text-blue-600">
+                <a className="hover:text-blue-400" href={`tel:903122966600`}>
+                  +90 (0312) 296 66 00
+                </a>{" "}
+              </p>
             </CardContent>
           </Card>
 
@@ -34,7 +42,14 @@ export default function ContactSection() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-2">Destek</p>
-              <p className="font-semibold text-green-600">destek@kurumsal.gov.tr</p>
+              <p className="font-semibold text-green-600">
+                <a
+                  className="hover:text-green-400"
+                  href="mailto:eizindestek@csgb.gov.tr "
+                >
+                  eizindestek@csgb.gov
+                </a>{" "}
+              </p>
             </CardContent>
           </Card>
 
@@ -46,8 +61,9 @@ export default function ContactSection() {
               <CardTitle className="text-lg">Adres</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-2">Merkez Ofis</p>
-              <p className="font-semibold text-orange-600">Ankara, Türkiye</p>
+              <p className="font-semibold text-orange-600">
+                Emek Mah. Bosna Hersek Cd. No:29, 06490 Çankaya / ANKARA
+              </p>
             </CardContent>
           </Card>
 
@@ -60,15 +76,17 @@ export default function ContactSection() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-2">Hafta İçi</p>
-              <p className="font-semibold text-purple-600">08:30 - 17:30</p>
+              <p className="font-semibold text-purple-600">09:00 - 18:00</p>
             </CardContent>
           </Card>
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-blue-600 hover:bg-blue-700 px-8">Canlı Destek</Button>
+          <Button className="bg-blue-600 hover:bg-blue-700 px-8">
+            Canlı Destek
+          </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }

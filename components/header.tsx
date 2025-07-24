@@ -1,32 +1,133 @@
-"use client"
+"use client";
 
-import { Search, Menu, Phone, Mail, ChevronDown, Home } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { useState } from "react"
-import Image from "next/image"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  CircleCheckIcon,
+  CircleHelpIcon,
+  CircleIcon,
+  Home,
+} from "lucide-react";
+
+import { Search, Menu, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
-  const [activeMode, setActiveMode] = useState<"workers" | "employers">("workers")
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeMode, setActiveMode] = useState<"workers" | "employers">(
+    "workers"
+  );
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const kanunlar: { title: string; href: string; description: string }[] = [
+    {
+      title: "6735 Sayılı Uluslararası İşgücü Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6735&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 13.08.2016 Resmî Gazete Sayısı: 29800",
+    },
+    {
+      title: "6458 Sayılı Yabancılar ve Uluslararası Koruma Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6458&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 11.04.2013 Resmî Gazete Sayısı: 28615",
+    },
+    {
+      title: "4875 Sayılı Doğrudan Yabancı Yatırımlar Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4875&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 17.06.2003 Resmî Gazete Sayısı: 25141",
+    },
+    {
+      title: "5901 Sayılı Türk Vatandaşlığı Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5901&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 12.06.2009 Resmî Gazete Sayısı: 27256",
+    },
+    {
+      title: "3218 Sayılı Serbest Bölgeler Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=3218&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 15.06.1985 Resmî Gazete Sayısı: 18785",
+    },
+    {
+      title: "5510 Sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5510&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 16.06.2006 Resmî Gazete Sayısı: 26200",
+    },
+    {
+      title: "492 Sayılı Harçlar Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=492&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 17.07.1964 Resmî Gazete Sayısı: 11756",
+    },
+    {
+      title: "2547 Sayılı Yükseköğretim Kanunu",
+      href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2547&MevzuatTur=1&MevzuatTertip=5",
+      description: "Resmî Gazete Tarihi: 06.11.1981 Resmî Gazete Sayısı: 17506",
+    },
+  ];
+  const yonetmelikler: { title: string; href: string; description: string }[] =
+    [
+      {
+        title:
+          "Doğrudan Yabancı Yatırımlarda Yabancı Uyruklu Personel İstihdamı Hakkında Yönetmelik",
+        href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5453&MevzuatTur=7&MevzuatTertip=5",
+        description:
+          "Resmî Gazete Tarihi: 29.08.2003 Resmî Gazete Sayısı: 25214",
+      },
+      {
+        title: "Turkuaz Kart Yönetmeliği",
+        href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=23413&MevzuatTur=7&MevzuatTertip=5",
+        description:
+          "Resmî Gazete Tarihi: 14.03.2017 Resmî Gazete Sayısı: 30007",
+      },
+      {
+        title:
+          "Geçici Koruma Sağlanan Yabancıların Çalışma İzinlerine Dair Yönetmelik",
+        href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20168375&MevzuatTur=3&MevzuatTertip=5",
+        description:
+          "Resmî Gazete Tarihi: 15.01.2016 Resmî Gazete Sayısı: 29594",
+      },
+      {
+        title:
+          "Uluslararası Koruma Başvuru Sahibi ve Uluslararası Koruma Statü Sahibi Kişilerin Çalışmasına Dair Yönetmelik",
+        href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=21517&MevzuatTur=7&MevzuatTertip=5",
+        description:
+          "Resmî Gazete Tarihi: 26.04.2016 Resmî Gazete Sayısı: 29695",
+      },
+      {
+        title:
+          "Serbest Bölgelerde Çalışacak Yabancıların Çalışma İzinlerine Dair Yönetmelik",
+        href: "https://www.resmigazete.gov.tr/eskiler/2017/05/20170527-11.htm",
+        description:
+          "Resmî Gazete Tarihi: 27.05.2017 Resmî Gazete Sayısı: 30078",
+      },
+    ];
 
   return (
-    <header className="bg-white">
-      {/* Top toggle buttons */}
+    <>
       <div className="bg-gray-100 py-2">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-1">
-            
             <Button
               variant={activeMode === "workers" ? "default" : "ghost"}
-              className={`px-6 py-2 text-sm font-medium ${activeMode ==="workers"&&'bg-[#155DFC]/70 hover:bg-[#155DFC]'}`}
+              className={`px-6 py-2 text-sm font-medium ${
+                activeMode === "workers" && "bg-[#155DFC]/70 hover:bg-[#155DFC]"
+              }`}
               onClick={() => setActiveMode("workers")}
             >
               Nitelikli Çalışanlar İçin
             </Button>
             <Button
               variant={activeMode === "employers" ? "default" : "ghost"}
-              className={`px-6 py-2 text-sm font-medium ${activeMode ==="employers"&&'bg-[#155DFC]/70 hover:bg-[#155DFC]'}`}
+              className={`px-6 py-2 text-sm font-medium ${
+                activeMode === "employers" &&
+                "bg-[#155DFC]/70 hover:bg-[#155DFC]"
+              }`}
               onClick={() => setActiveMode("employers")}
             >
               İşverenler İçin
@@ -34,157 +135,311 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+        {/* Top toggle buttons */}
 
-      {/* Main header */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo section */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-3">
-                <div className=" text-white flex items-center justify-center">
-                  <Image 
-                   src="csgb-logo.svg"
-                   alt="CSGB Logo"
-                    width={64}
-                    height={64}
-                   priority
-                    
-                  
-                  />
-                </div>
-                <div className="border-l-4 border-gray-200 pl-3">
-                  <div className="text-sm font-bold text-gray-900">T.C.</div>
-                  <div className="text-xs text-gray-800">Çalışma ve Sosyal Güvenlik Bakanlığı</div>
+        {/* Main header */}
+        <div className="border-b border-gray-200 ">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              {/* Logo section */}
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-3">
+                  <div className=" text-white flex items-center justify-center">
+                    <Image
+                      src="csgb-logo.svg"
+                      alt="CSGB Logo"
+                      width={64}
+                      height={64}
+                      priority
+                    />
+                  </div>
+                  <div className="border-l-4 border-gray-200 pl-3">
+                    <div className="text-sm font-bold text-gray-900">T.C.</div>
+                    <div className="text-xs text-gray-800">
+                      Çalışma ve Sosyal Güvenlik Bakanlığı
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right section */}
-            <div className="flex items-center space-x-6">
-              {/* Contact icons */}
-              <div className="hidden md:flex items-center space-x-4">
-                <Button variant="ghost" size="sm" className="p-2">
-                  <Mail className="w-5 h-5 text-blue-600" />
-                </Button>
-                <Button variant="ghost" size="sm" className="p-2">
-                  <Phone className="w-5 h-5 text-blue-600" />
-                </Button>
-                <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800">
-                  SSS
-                </Button>
-              </div>
-
-              {/* Search */}
-              <div className="hidden md:flex items-center">
-                <div className="relative">
-                  <Input placeholder="Konu ara..." className="w-64 pr-12 border-gray-300" />
-                  <Button size="sm" className="absolute right-0 top-0 h-full px-3 bg-blue-600 hover:bg-blue-700">
-                    <Search className="w-4 h-4" />
+              {/* Right section */}
+              <div className="flex items-center space-x-6">
+                {/* Contact icons */}
+                <div className="hidden md:flex items-center space-x-4">
+                  <Button variant="ghost" size="sm" className="p-2">
+                    <Mail className="w-5 h-5 text-blue-600" />
+                  </Button>
+                  <Button variant="ghost" size="sm" className="p-2">
+                    <Phone className="w-5 h-5 text-blue-600" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    SSS
                   </Button>
                 </div>
-              </div>
 
-              {/* Language options */}
-              <div className="hidden md:flex items-center space-x-2 text-sm">
-                <span className="font-bold text-blue-600 border-b-2 border-blue-600 pb-1">TR</span>
-                <span className="text-gray-500 hover:text-blue-600 cursor-pointer">EN</span>
-                
-              </div>
+                <div className="hidden md:flex items-center">
+                  <div className="relative">
+                    <Input
+                      placeholder="Konu ara..."
+                      className="w-64 pr-12 border-gray-300"
+                    />
+                    <Button
+                      size="sm"
+                      className="absolute right-0 top-0 h-full px-3 bg-blue-600 hover:bg-blue-700"
+                    >
+                      <Search className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
 
-            
+                <div className="hidden md:flex items-center space-x-2 text-sm">
+                  <span className="font-bold text-blue-600 border-b-2 border-blue-600 pb-1">
+                    TR
+                  </span>
+                  <span className="text-gray-500 hover:text-blue-600 cursor-pointer">
+                    EN
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-3">
-            <ul className="hidden md:flex items-center space-x-8">
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Türkiye'de Çalışmak</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Eğitim ve Meslek</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Vize ve İkamet</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Türkiye'de Yaşam</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Hizmetler</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-              <li className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 py-2">
-                  <span>Hakkımızda</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </li>
-            </ul>
+        {/* Navigation */}
+        <nav className="bg-white border-b border-gray-200 shadow-sm ">
+          <div className="container mx-auto px-4 ">
+            <div className="relative flex items-center justify-between py-3 ">
+              <NavigationMenu
+                viewport={false}
+                className=" font-[400] text-3xl tracking-wide leading-7 "
+              >
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link href="">
+                        <Home className="size-5" />
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="cursor-pointer">
+                      İlgili Kanunlar
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="z-20">
+                      <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        {kanunlar.map((component) => (
+                          <ListItem
+                            key={component.title}
+                            title={component.title}
+                            href={component.href}
+                          >
+                            {component.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="cursor-pointer">
+                      İlgili Yönetmelikler
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="z-20">
+                      <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        {yonetmelikler.map((component) => (
+                          <ListItem
+                            key={component.title}
+                            title={component.title}
+                            href={component.href}
+                          >
+                            {component.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
 
-            <Button variant="ghost" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Menu className="w-6 h-6" />
-            </Button>
-          </div>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                    <NavigationMenuContent className="z-20">
+                      <ul className="grid w-[300px] gap-4">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">
+                              <div className="font-medium">Components</div>
+                              <div className="text-muted-foreground">
+                                Browse all components in the library.
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">
+                              <div className="font-medium">Documentation</div>
+                              <div className="text-muted-foreground">
+                                Learn how to use the library.
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">
+                              <div className="font-medium">Blog</div>
+                              <div className="text-muted-foreground">
+                                Read our latest blog posts.
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[200px] gap-4">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">Components</Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">Documentation</Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link href="#">Blocks</Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[200px] gap-4">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="#"
+                              className="flex-row items-center gap-2"
+                            >
+                              <CircleHelpIcon />
+                              Backlog
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="#"
+                              className="flex-row items-center gap-2"
+                            >
+                              <CircleIcon />
+                              To Do
+                            </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="#"
+                              className="flex-row items-center gap-2"
+                            >
+                              <CircleCheckIcon />
+                              Done
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
 
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 py-4">
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Türkiye'de Çalışmak
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Eğitim ve Meslek
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Vize ve İkamet
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Türkiye'de Yaşam
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Hizmetler
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">
-                    Hakkımızda
-                  </a>
-                </li>
-              </ul>
+              <Button
+                variant="ghost"
+                className="md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <Menu className="w-6 h-6" />
+              </Button>
             </div>
-          )}
-        </div>
-      </nav>
-    </header>
-  )
+
+            {/* Mobile menu */}
+            {isMenuOpen && (
+              <div className="md:hidden border-t border-gray-200 py-4">
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Türkiye'de Çalışmak
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Eğitim ve Meslek
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Vize ve İkamet
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Türkiye'de Yaşam
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Hizmetler
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 text-gray-700 hover:text-blue-600"
+                    >
+                      Hakkımızda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        </nav>
+      </header>
+    </>
+  );
+}
+
+function ListItem({
+  title,
+  children,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <Link href={href} target="_blank">
+          <div className="text-sm font-semibold tracking-wide">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
 }
