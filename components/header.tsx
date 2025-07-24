@@ -221,13 +221,13 @@ export default function Header() {
                 <NavigationMenuList className="flex gap-10 w-full">
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black ">
+                      <Link href="/" className=" hover:bg-white hover:text-black">
                         <Home className="size-5 hover:text-black" />
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem    >
-                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900">
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] ">
                       İlgili Kanunlar
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">
@@ -245,7 +245,7 @@ export default function Header() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem >
-                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900">
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400]">
                       İlgili Yönetmelikler
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">

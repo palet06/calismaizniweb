@@ -26,18 +26,9 @@ const slides: SlideData[] = [
     imageAlt: "X Gönderisi",
     url: "https://x.com/csgbakanligi/status/1666837139751940096",
   },
+ 
   {
     id: 2,
-    title:
-      "Türkiye'de profesyonel şoför, tren makinisti veya nakliye sektöründe kariyerinizi başlatın",
-    description:
-      "Ulaştırma sektöründe kariyer fırsatlarını keşfedin ve başvuru sürecinizi öğrenin.",
-    image: "/tweet-1.png",
-    imageAlt: "X Gönderisi",
-    url: "https://x.com/csgbakanligi/status/1666837139751940096",
-  },
-  {
-    id: 3,
     title:
       "Bugün engelli vatandaşlarımız için bir müjdeyi daha duyurmak istiyoruz.",
     description:
@@ -47,13 +38,24 @@ const slides: SlideData[] = [
     url: "https://x.com/isikhanvedat/status/1923036792032272861",
   },
   {
-    id: 4,
-    title: "Türkiye'de Teknoloji Sektörü",
+    id: 3,
+    title: "Engelsiz İşgücü Uyum Programı’nı Hayata Geçiriyoruz!",
     description:
-      "Gelişen teknoloji ekosisteminde yerinizi alın ve dijital dönüşümün parçası olun.",
-    image: "/tweet-1.png",
+      "Engelli vatandaşlarımızın istihdamda daha güçlü bir şekilde yer almalarını sağlayacağız.",
+    image: "/tweet-3.png",
     imageAlt: "X Gönderisi",
-    url: "https://x.com/csgbakanligi/status/1666837139751940096",
+    url: "https://x.com/isikhanvedat/status/1947560009447182362",
+  },
+  {
+    id: 4,
+    title: "Çalışma ve Sosyal Güvenlik Bakanımız Sayın Prof. Dr."
+
+,
+    description:
+      "Çalışma ve Sosyal Güvenlik Bakanımız Sayın Prof. Dr Işıkhan Cumhurbaşkanı Yardımcımız Sayın Cevdet Yılmaz başkanlığında düzenlenen Ekonomi Koordinasyon Kurulu (EKK) toplantısına katıldı.",
+    image: "/tweet-4.png",
+    imageAlt: "X Gönderisi",
+    url: "https://x.com/csgbakanligi/status/1947298326614855727",
   },
 ];
 
