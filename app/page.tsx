@@ -7,6 +7,7 @@ import GuidesSection from "@/components/guides-section"
 import NewsSection from "@/components/news-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import SocialSection from "@/components/social-section"
 
 export default function Home() {
  return (
@@ -22,6 +23,7 @@ export default function Home() {
         <ApplicationsSection />
         <GuidesSection />
         <NewsSection />
+        <SocialSection/>
         <ContactSection />
       </main>
       <Footer />
