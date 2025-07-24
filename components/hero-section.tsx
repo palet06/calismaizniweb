@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[600px] overflow-hidden">
+    <section className="relative h-[600px] overflow-hidden md:px-5">
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -34,7 +34,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hızlı Erişim */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+      <div className="relative z-10 container  px-4  flex items-center size-full">
         <div className="w-full max-w-md">
           <Card className="bg-teal-100/95 backdrop-blur-sm border-0 shadow-lg">
             <CardHeader className="pb-4">

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ServicesSection() {
   return (
     <section id="tech" className="py-16 bg-blue-50 scroll-mt-40">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center ">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">

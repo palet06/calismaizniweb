@@ -111,7 +111,7 @@ export default function Header() {
   return (
     <>
       <div className="bg-blue-900 py-2 border-b-[1px] border-b-slate-600">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8">
           <div className="flex items-center space-x-1">
             <Button
               variant={activeMode === "workers" ? "default" : "ghost"}
@@ -140,7 +140,7 @@ export default function Header() {
 
         {/* Main header */}
         <div className=" border-gray-200 ">
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-4 md:px-8">
             <div className="flex items-center justify-between">
               {/* Logo section */}
               <div className="flex items-center space-x-4">
@@ -212,7 +212,7 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="bg-blue-900  border-gray-200 shadow-sm">
-          <div className="container mx-auto px-4 ">
+          <div className="container mx-auto px-4 md:px-8">
             <div className="py-3 ">
               <NavigationMenu
                 viewport={false}

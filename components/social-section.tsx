@@ -69,7 +69,7 @@ export default function SocialSection() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
@@ -108,7 +108,7 @@ export default function SocialSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col items-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex flex-col items-center">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Sosyal Medya Paylaşımları
@@ -120,7 +120,7 @@ export default function SocialSection() {
         </div>
         <div className="w-full">
           {/* Desktop View - 3 cards */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-3 gap-6 md:size-4/5 mx-auto">
             {getVisibleSlides().map((slide, index) => (
               <Link
                 key={`${slide.id}-${index}`}
@@ -181,7 +181,7 @@ export default function SocialSection() {
       <Button
         variant="secondary"
         size="icon"
-        className="absolute left-10 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12"
+        className="absolute left-10 md:left-5 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12"
         onClick={prevSlide}
       >
         <ChevronLeft className="w-6 h-6" />
@@ -190,7 +190,7 @@ export default function SocialSection() {
       <Button
         variant="secondary"
         size="icon"
-        className="absolute right-10 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12"
+        className="absolute right-10 md:right-5 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12"
         onClick={nextSlide}
       >
         <ChevronRight className="w-6 h-6" />
