@@ -14,20 +14,21 @@ export default function HeroSection() {
     <section className="relative h-[600px] overflow-hidden">
       {/* Hero Background Image */}
       <div className="absolute inset-0">
-        {/* <Image
-          src="/calisma-hero.png"
+        <Image
+          // src="/calisma-hero.png"
+          src="/hero-alternative.png"
           alt="Çalışma Hero"
           fill
           className="object-cover"
           
-        /> */}
-        <video
+        />
+        {/* <video
           src="/hero-animation-canva.mp4"
           autoPlay
           loop
           muted
           className="absolute z-10 w-auto min-w-full min-h-full max-w-none blur-xs grayscale-50"
-        ></video>
+        ></video> */}
       
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       </div>
