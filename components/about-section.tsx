@@ -6,7 +6,7 @@ export default function AboutSection() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-28 items-center justify-end ">
-          <div>
+          <div className="sm:flex sm:flex-col sm:items-center md:block md:items-start">
             <Image
               src="/turkiye-1.png"
               alt="Profesyonel ekip"
@@ -15,7 +15,7 @@ export default function AboutSection() {
               className="rounded-lg shadow-lg"
             />
           </div>
-          <div>
+          <div className="sm:flex sm:flex-col sm:items-center md:block md:items-start">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Türkiye'de Çalışmak</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
              Türkiye, dinamik ekonomisi ve stratejik konumuyla iş fırsatları sunan bir ülkedir. Gelişen sektörleri ve genç iş gücüyle yabancılar için cazip çalışma ortamları sağlar.

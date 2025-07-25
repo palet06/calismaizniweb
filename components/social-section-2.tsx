@@ -84,7 +84,7 @@ export function SocialSection2() {
           <div className="mx-auto max-w-6xl">
             {" "}
             {/* Daha geniş alan */}
-            <Carousel className="w-full" plugins={[plugin.current]}>
+            <Carousel className="w-full px-10 md:px-0" plugins={[plugin.current]}>
               <CarouselContent>
                 {slides.map((slide, index) => (
                   <CarouselItem
@@ -120,8 +120,10 @@ export function SocialSection2() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious  className="bg-blue-900 text-white border-blue-600 border-2 " />
-              <CarouselNext  className="bg-blue-900 text-white border-blue-600  border-2"/>
+              
+              <CarouselPrevious  className="bg-blue-900 text-white border-blue-600 border-2 ml-8 md:ml-0 " />
+              <CarouselNext  className="bg-blue-900 text-white border-blue-600  border-2 mr-8 md:mr-0"/>
+              
             </Carousel>
           </div>
         </div>

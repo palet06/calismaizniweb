@@ -9,11 +9,13 @@ import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
 import { SocialSection2 } from "@/components/social-section-2";
+import { MobileNav } from "@/components/mobile-nav";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      
       <main>
         <HeroSection />
         <AboutSection />

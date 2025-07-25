@@ -7,7 +7,7 @@ export default function ServicesSection() {
     <section id="tech" className="py-16 bg-blue-50 scroll-mt-40">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center ">
-          <div>
+          <div className="sm:flex sm:flex-col sm:items-center md:block md:items-start">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Türkiye - <span className="text-[#ff2d5f]">TECH</span>
               <span className="text-[#507df0]">VISA</span>{" "}
@@ -55,7 +55,7 @@ export default function ServicesSection() {
             </Button>
             </Link>
           </div>
-          <div className="flex flex-row justify-end items-center">
+          <div className="flex flex-row justify-baseline lg:justify-end items-center  sm:flex-col sm:items-center md:flex-row md:items-start">
             <Image
               src="/tech-visa.png"
               alt="TECH Visa"

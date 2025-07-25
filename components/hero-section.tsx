@@ -35,7 +35,7 @@ export default function HeroSection() {
 
       {/* Hızlı Erişim */}
       <div className="relative z-10 container  px-4 md:px-8  flex items-center h-full mx-auto">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md mx-auto md:mx-0">
           <Card className="bg-teal-100/95 backdrop-blur-sm border-0 shadow-lg">
             <CardHeader className="pb-4">
               <CardTitle className="text-2xl font-bold text-gray-900">

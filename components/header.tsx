@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { MobileNav } from "./mobile-nav";
 
 export default function Header() {
   const [activeMode, setActiveMode] = useState<"workers" | "employers">(
@@ -155,8 +156,8 @@ export default function Header() {
                     />
                   </div>
                   <div className="border-l-4 border-slate-600 pl-3">
-                    <div className="text-xl font-bold text-white">T.C.</div>
-                    <div className="text-lg text-white">
+                    <div className="text-sm lg:text-xl font-bold text-white">T.C.</div>
+                    <div className="text-xs lg:text-lg text-white">
                       Çalışma ve Sosyal Güvenlik Bakanlığı
                     </div>
                   </div>
@@ -216,18 +217,18 @@ export default function Header() {
             <div className="py-3 ">
               <NavigationMenu
                 viewport={false}
-                className=" font-[400] text-3xl tracking-wide leading-7 w-full  "
+                className="hidden lg:flex font-[400] text-3xl  w-full  "
               >
-                <NavigationMenuList className="flex gap-10 w-full">
+                <NavigationMenuList className="flex gap-5 md:gap-10 w-full items-end ">
                   <NavigationMenuItem >
-                    <NavigationMenuLink asChild>
+                    <NavigationMenuLink  asChild>
                       <Link href="/" className=" hover:bg-white hover:text-black">
-                        <Home className="size-5 hover:text-black" />
+                        <Home className="size-5 hover:text-black " />
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem    >
-                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] ">
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] whitespace-nowrap">
                       İlgili Kanunlar
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">
@@ -245,7 +246,7 @@ export default function Header() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem >
-                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400]">
+                    <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] whitespace-nowrap">
                       İlgili Yönetmelikler
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-20">
@@ -265,7 +266,7 @@ export default function Header() {
                  
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="#tech" className=" hover:bg-white hover:text-black ">
+                      <Link href="#tech" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        TECHVISA
                       </Link>
                     </NavigationMenuLink>
@@ -273,7 +274,7 @@ export default function Header() {
                   </NavigationMenuItem>
                    <NavigationMenuItem >
                      <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black">
+                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        Değerlendirme Kriterleri
                       </Link>
                     </NavigationMenuLink>
@@ -281,7 +282,7 @@ export default function Header() {
                   </NavigationMenuItem>
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black">
+                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        İzin Şerhleri
                       </Link>
                     </NavigationMenuLink>
@@ -303,7 +304,7 @@ export default function Header() {
                   </NavigationMenuItem>
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black">
+                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        Kısıtlamalar
                       </Link>
                     </NavigationMenuLink>
@@ -344,70 +345,10 @@ export default function Header() {
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <Button
-                variant="ghost"
-                className="md:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                <Menu className="w-6 h-6" />
-              </Button>
+              <MobileNav />
             </div>
 
-            {/* Mobile menu */}
-            {isMenuOpen && (
-              <div className="md:hidden border-t border-gray-200 py-4">
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Türkiye'de Çalışmak
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Eğitim ve Meslek
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Vize ve İkamet
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Türkiye'de Yaşam
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Hizmetler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block py-2 text-gray-700 hover:text-blue-600"
-                    >
-                      Hakkımızda
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            )}
+          
           </div>
         </nav>
       </header>
