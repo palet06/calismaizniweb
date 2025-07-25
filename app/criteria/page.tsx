@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -76,8 +77,8 @@ export default function Criteria() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      
+      <section className="bg-teal-100/95 text-teal-900 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
@@ -86,8 +87,8 @@ export default function Criteria() {
               </div>
             </div>
             <h1 className="text-4xl font-bold mb-4">Çalışma İzni Değerlendirme Kriterleri</h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Türkiye'de çalışma izni başvurunuzun değerlendirilmesinde kullanılan temel kriterler ve puanlama sistemi
+            <p className="text-xl text-teal-900 mb-8">
+              Çalışma izni başvurunuzun değerlendirilmesinde kullanılan temel kriterler ve puanlama sistemi
             </p>
             
           </div>
@@ -155,7 +156,7 @@ export default function Criteria() {
                     <div className="space-y-2">
                       {criteria.details.map((detail, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-teal-700 flex-shrink-0" />
                           <span className="text-sm text-gray-700">{detail}</span>
                         </div>
                       ))}
@@ -172,9 +173,9 @@ export default function Criteria() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-green-500 to-green-600 text-white">
-                <div className="flex items-center space-x-3">
+            <Card className="shadow-lg p-0 ">
+              <CardHeader className="bg-teal-700 text-white rounded-tl-xl rounded-tr-xl ">
+                <div className="flex items-center space-x-3 p-1">
                   <Calculator className="w-8 h-8" />
                   <div>
                     <CardTitle className="text-2xl">Puan Hesaplama Örneği</CardTitle>
@@ -207,9 +208,9 @@ export default function Criteria() {
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                      <div className="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <div className="text-center">
-                          <div className="text-3xl font-bold text-green-600">11</div>
+                          <div className="text-3xl font-bold text-green-600 ">11</div>
                           <div className="text-sm text-green-600">Toplam Puan</div>
                         </div>
                       </div>
@@ -309,22 +310,21 @@ export default function Criteria() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-teal-100/95 text-teal-900">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <Award className="w-16 h-16 mx-auto mb-6 text-blue-200" />
+            <Award className="w-16 h-16 mx-auto mb-6 text-teal-900" />
             <h2 className="text-3xl font-bold mb-4">Başvurunuza Hazır mısınız?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Kriterlerimizi inceledikten sonra çalışma izni başvurunuzu başlatabilirsiniz
+            <p className="text-xl text-teal-900 mb-8">
+              Kriterlerimizi inceledikten sonra çalışma izin başvurunuzu başlatabilirsiniz
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button  className=" bg-teal-700 hover:bg-teal-900 text-white font-medium py-3 w-[180px]">
                 Başvuru Yap
               </Button>
               <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+               
+                className=" bg-teal-700 hover:bg-teal-900 text-white font-medium py-3 w-[180px]"
               >
                 Uzman Desteği Al
               </Button>

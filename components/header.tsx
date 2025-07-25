@@ -266,7 +266,7 @@ export default function Header() {
                  
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="#tech" className=" hover:bg-white hover:text-black whitespace-nowrap">
+                      <Link href="/#tech" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        TECHVISA
                       </Link>
                     </NavigationMenuLink>
@@ -274,7 +274,7 @@ export default function Header() {
                   </NavigationMenuItem>
                    <NavigationMenuItem >
                      <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
+                      <Link href="/criteria" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        Değerlendirme Kriterleri
                       </Link>
                     </NavigationMenuLink>
@@ -282,7 +282,7 @@ export default function Header() {
                   </NavigationMenuItem>
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
+                      <Link href="/annotations" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        İzin Şerhleri
                       </Link>
                     </NavigationMenuLink>

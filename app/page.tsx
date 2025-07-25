@@ -6,28 +6,25 @@ import ApplicationsSection from "@/components/applications-section";
 import GuidesSection from "@/components/guides-section";
 import NewsSection from "@/components/news-section";
 import ContactSection from "@/components/contact-section";
-import Footer from "@/components/footer";
+
 
 import { SocialSection2 } from "@/components/social-section-2";
-import { MobileNav } from "@/components/mobile-nav";
+
 
 export default function Home() {
   return (
-    
-      
-      <main>
-        <HeroSection />
-        <AboutSection />
+    <main>
+      <HeroSection />
+      <AboutSection />
 
-        <ServicesSection />
+      <ServicesSection />
 
-        <ApplicationsSection />
-        <GuidesSection />
-        <NewsSection />
-        {/* <SocialSection/> */}
-        <SocialSection2 />
-        <ContactSection />
-      </main>
-      
+      <ApplicationsSection />
+      <GuidesSection />
+      <NewsSection />
+      {/* <SocialSection/> */}
+      <SocialSection2 />
+      <ContactSection />
+    </main>
   );
 }
