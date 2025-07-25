@@ -120,7 +120,7 @@ export default function SocialSection() {
         </div>
         <div className="w-full">
           {/* Desktop View - 3 cards */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 md:size-4/5 mx-auto">
+          <div className="hidden md:grid md:grid-cols-3  gap-6 md:size-4/5 mx-auto">
             {getVisibleSlides().map((slide, index) => (
               <Link
                 key={`${slide.id}-${index}`}

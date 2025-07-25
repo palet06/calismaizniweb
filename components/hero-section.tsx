@@ -34,7 +34,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hızlı Erişim */}
-      <div className="relative z-10 container  px-4  flex items-center size-full">
+      <div className="relative z-10 container  px-4 md:px-8  flex items-center h-full mx-auto">
         <div className="w-full max-w-md">
           <Card className="bg-teal-100/95 backdrop-blur-sm border-0 shadow-lg">
             <CardHeader className="pb-4">
