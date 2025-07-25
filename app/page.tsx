@@ -13,8 +13,7 @@ import { MobileNav } from "@/components/mobile-nav";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    
       
       <main>
         <HeroSection />
@@ -29,7 +28,6 @@ export default function Home() {
         <SocialSection2 />
         <ContactSection />
       </main>
-      <Footer />
-    </div>
+      
   );
 }
