@@ -15,6 +15,7 @@ import {
   Globe,
   Calculator,
 } from "lucide-react"
+import Link from "next/link"
 
 export default function Criteria() {
   const criteriaData = [
@@ -319,15 +320,20 @@ export default function Criteria() {
               Kriterlerimizi inceledikten sonra çalışma izin başvurunuzu başlatabilirsiniz
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button  className=" bg-teal-700 hover:bg-teal-900 text-white font-medium py-3 w-[180px]">
-                Başvuru Yap
-              </Button>
-              <Button
-               
-                className=" bg-teal-700 hover:bg-teal-900 text-white font-medium py-3 w-[180px]"
+              <Link href="https://www.alo170.gov.tr" target="_blank">
+                <Button className="bg-teal-700 hover:bg-teal-900 text-white w-[180px] font-medium py-3">
+                  ALO 170 Destek
+                </Button>
+              </Link>
+
+              <Link
+                href="https://ecalismaizni.csgb.gov.tr/eizin"
+                target="_blank"
               >
-                Uzman Desteği Al
-              </Button>
+                <Button className="bg-teal-700 hover:bg-teal-900 text-white w-[180px] font-medium py-3">
+                  İzin Başvurusu Yap
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -304,7 +304,7 @@ export default function Header() {
                   </NavigationMenuItem>
                   <NavigationMenuItem >
                     <NavigationMenuLink asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black whitespace-nowrap">
+                      <Link href="/restricted-professions" className=" hover:bg-white hover:text-black whitespace-nowrap">
                        Kısıtlamalar
                       </Link>
                     </NavigationMenuLink>
