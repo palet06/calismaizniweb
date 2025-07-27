@@ -1,5 +1,6 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center justify-center">
+                <Link href="/" >
                 <Image
                   src="csgb-logo.svg"
                   alt="CSGB Logo"
@@ -16,6 +18,7 @@ export default function Footer() {
                   height={64}
                   priority
                 />
+                </Link>
               </div>
               <div>
                 <h3 className="font-bold text-lg">T.C.</h3>
@@ -29,33 +32,24 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Hızlı Linkler</h4>
             <ul className="space-y-2 text-blue-200">
+              
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  İlgili Yönetmelikler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  İlgili Kanunlar
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/#tech" className="hover:text-white transition-colors">
                   TECHVISA
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/criteria" className="hover:text-white transition-colors">
                   Değerlendirme Kriterleri
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="annotations" className="hover:text-white transition-colors">
                   İzin Şerhleri
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/restricted-professions" className="hover:text-white transition-colors">
                   Kısıtlamalar
                 </a>
               </li>
@@ -66,8 +60,8 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Destek</h4>
             <ul className="space-y-2 text-blue-200">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Yardım Merkezi
+                <a href="https://www.alo170.gov.tr" target="_blank" className="hover:text-white transition-colors">
+                  Yardım Merkezi - ALO 170
                 </a>
               </li>
               <li>
@@ -80,11 +74,7 @@ export default function Footer() {
                   İletişim
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Geri Bildirim
-                </a>
-              </li>
+              
             </ul>
           </div>
 
@@ -92,25 +82,36 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Bizi Takip Edin</h4>
             <div className="flex space-x-4 mb-4">
               <a
-                href="#"
+                href="https://www.facebook.com/csgb.uigm"
+                target="_blank"
                 className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://x.com/csgb_uigm"
+                target="_blank"
                 className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/csgb_uigm"
+                target="_blank"
                 className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/channel/UCjG12ECuhvrQwIIBYJshRwA"
+                target="_blank"
+                className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
+              <a
+                href="https://tr.linkedin.com/in/csgbuigm"
+                target="_blank"
                 className="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
@@ -125,7 +126,7 @@ export default function Footer() {
         <div className="border-t border-blue-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-200 text-sm">
-              © 2024 Çalışma ve Sosyal Güvenlik Bakanlığı. Tüm hakları saklıdır.
+              © 2025 Çalışma ve Sosyal Güvenlik Bakanlığı. Tüm hakları saklıdır.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
@@ -140,12 +141,7 @@ export default function Footer() {
               >
                 Kullanım Şartları
               </a>
-              <a
-                href="#"
-                className="text-blue-200 hover:text-white text-sm transition-colors"
-              >
-                Erişilebilirlik
-              </a>
+              
             </div>
           </div>
         </div>

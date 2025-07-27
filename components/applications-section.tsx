@@ -25,7 +25,7 @@ export default function ApplicationsSection() {
             </CardHeader>
             <CardContent className="text-center ">
               <p className="text-gray-600 mb-6">
-                Bir mesleğiniz varsa Türkiye'de çalışma izni almak çok kolay.
+               Mesleğiniz varsa Türkiye'de çalışma izni almak çok kolay.
               </p>
 
               <Button className="w-full bg-blue-600 hover:bg-blue-700">

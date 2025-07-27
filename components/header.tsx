@@ -117,7 +117,9 @@ export default function Header() {
             <Button
               variant={activeMode === "workers" ? "default" : "ghost"}
               className={`px-6 py-2 text-sm font-medium text-black hover:bg-teal-200 ${
-                activeMode === "workers" ? "bg-teal-100/95 hover:bg-teal-200":"text-slate-400"
+                activeMode === "workers"
+                  ? "bg-teal-100/95 hover:bg-teal-200"
+                  : "text-slate-400"
               }`}
               onClick={() => setActiveMode("workers")}
             >
@@ -126,8 +128,9 @@ export default function Header() {
             <Button
               variant={activeMode === "employers" ? "default" : "ghost"}
               className={`px-6 py-2 text-sm font-medium text-black  hover:bg-teal-200 ${
-                activeMode === "employers" ?
-                "bg-teal-100/95 hover:bg-teal-200":"text-slate-400"
+                activeMode === "employers"
+                  ? "bg-teal-100/95 hover:bg-teal-200"
+                  : "text-slate-400"
               }`}
               onClick={() => setActiveMode("employers")}
             >
@@ -147,16 +150,20 @@ export default function Header() {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-3">
                   <div className=" text-white flex items-center justify-center">
-                    <Image
-                      src="csgb-logo.svg"
-                      alt="CSGB Logo"
-                      width={64}
-                      height={64}
-                      priority
-                    />
+                    <Link href="/">
+                      <Image
+                        src="csgb-logo.svg"
+                        alt="CSGB Logo"
+                        width={64}
+                        height={64}
+                        priority
+                      />
+                    </Link>
                   </div>
                   <div className="border-l-4 border-slate-600 pl-3">
-                    <div className="text-sm lg:text-xl font-bold text-white">T.C.</div>
+                    <div className="text-sm lg:text-xl font-bold text-white">
+                      T.C.
+                    </div>
                     <div className="text-xs lg:text-lg text-white">
                       Çalışma ve Sosyal Güvenlik Bakanlığı
                     </div>
@@ -168,10 +175,18 @@ export default function Header() {
               <div className="flex items-center space-x-6">
                 {/* Contact icons */}
                 <div className="hidden md:flex items-center space-x-4">
-                  <Button variant="ghost" size="sm" className="p-2 text-white  hover:text-blue-800">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="p-2 text-white  hover:text-blue-800"
+                  >
                     <Mail className="w-5 h-5 " />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2t text-white  hover:text-blue-800">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="p-2t text-white  hover:text-blue-800"
+                  >
                     <Phone className="w-5 h-5 " />
                   </Button>
                   <Button
@@ -220,14 +235,17 @@ export default function Header() {
                 className="hidden lg:flex font-[400] text-3xl  w-full  "
               >
                 <NavigationMenuList className="flex gap-5 md:gap-10 w-full items-end ">
-                  <NavigationMenuItem >
-                    <NavigationMenuLink  asChild>
-                      <Link href="/" className=" hover:bg-white hover:text-black">
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/"
+                        className=" hover:bg-white hover:text-black"
+                      >
                         <Home className="size-5 hover:text-black " />
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
-                  <NavigationMenuItem    >
+                  <NavigationMenuItem>
                     <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] whitespace-nowrap">
                       İlgili Kanunlar
                     </NavigationMenuTrigger>
@@ -245,7 +263,7 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                  <NavigationMenuItem >
+                  <NavigationMenuItem>
                     <NavigationMenuTrigger className="cursor-pointer bg-blue-900 font-[400] whitespace-nowrap">
                       İlgili Yönetmelikler
                     </NavigationMenuTrigger>
@@ -263,27 +281,34 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                 
-                  <NavigationMenuItem >
+
+                  <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <Link href="/#tech" className=" hover:bg-white hover:text-black whitespace-nowrap">
-                       TECHVISA
+                      <Link
+                        href="/#tech"
+                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                      >
+                        TECHVISA
                       </Link>
                     </NavigationMenuLink>
-                   
                   </NavigationMenuItem>
-                   <NavigationMenuItem >
-                     <NavigationMenuLink asChild>
-                      <Link href="/criteria" className=" hover:bg-white hover:text-black whitespace-nowrap">
-                       Değerlendirme Kriterleri
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/criteria"
+                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                      >
+                        Değerlendirme Kriterleri
                       </Link>
                     </NavigationMenuLink>
-                    
                   </NavigationMenuItem>
-                  <NavigationMenuItem >
+                  <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <Link href="/annotations" className=" hover:bg-white hover:text-black whitespace-nowrap">
-                       İzin Şerhleri
+                      <Link
+                        href="/annotations"
+                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                      >
+                        İzin Şerhleri
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuContent>
@@ -302,10 +327,13 @@ export default function Header() {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
-                  <NavigationMenuItem >
+                  <NavigationMenuItem>
                     <NavigationMenuLink asChild>
-                      <Link href="/restricted-professions" className=" hover:bg-white hover:text-black whitespace-nowrap">
-                       Kısıtlamalar
+                      <Link
+                        href="/restricted-professions"
+                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                      >
+                        Kısıtlamalar
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuContent>
@@ -347,8 +375,6 @@ export default function Header() {
 
               <MobileNav />
             </div>
-
-          
           </div>
         </nav>
       </header>
