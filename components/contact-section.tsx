@@ -85,7 +85,7 @@ export default function ContactSection() {
         <div className="text-center mt-12">
           <Link href="https://www.alo170.gov.tr" target="_blank">
           <Button className="bg-blue-600 hover:bg-blue-700 px-8">
-            Canlı Destek
+            ALO 170 Destek
           </Button>
           </Link>
         </div>

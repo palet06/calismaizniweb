@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import * as React from "react";
 
@@ -53,6 +54,16 @@ const slides = [
     image: "/tweet-4.png",
     imageAlt: "X Gönderisi",
     url: "https://x.com/csgbakanligi/status/1947298326614855727",
+  },
+  {
+    id: 5,
+    title: "Hepatit hastalığı taşıyan vatandaşlarımızın her zaman yanındayız.",
+
+    description:
+      "Genel Sağlık Sigortası kapsamında; Aşı ile ayakta ve yatarak tedavi giderlerini, Hepatit A aşı bedelini, Akut/kronik Hepatit B ve Hepatit C tedavisinde kullanılan ilaç bedellerini Sağlık Uygulama Tebliği (SUT) kapsamında karşılıyoruz." ,
+    image: "/tweet-5.png",
+    imageAlt: "X Gönderisi",
+    url: "https://x.com/isikhanvedat/status/1949712985460478025",
   },
 ];
 
