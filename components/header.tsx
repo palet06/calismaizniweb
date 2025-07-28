@@ -15,7 +15,7 @@ import {
   Home,
 } from "lucide-react";
 
-import { Search, Menu, Phone, Mail } from "lucide-react";
+import { Search,  Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -27,7 +27,7 @@ export default function Header() {
   const [activeMode, setActiveMode] = useState<"workers" | "employers">(
     "workers"
   );
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   const kanunlar: { title: string; href: string; description: string }[] = [
     {
@@ -311,21 +311,7 @@ export default function Header() {
                         İzin Şerhleri
                       </Link>
                     </NavigationMenuLink>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[200px] gap-4">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">Components</Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">Documentation</Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link href="#">Blocks</Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
+                    
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
@@ -336,39 +322,18 @@ export default function Header() {
                         Kısıtlamalar
                       </Link>
                     </NavigationMenuLink>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[200px] gap-4">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="#"
-                              className="flex-row items-center gap-2"
-                            >
-                              <CircleHelpIcon />
-                              Backlog
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="#"
-                              className="flex-row items-center gap-2"
-                            >
-                              <CircleIcon />
-                              To Do
-                            </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="#"
-                              className="flex-row items-center gap-2"
-                            >
-                              <CircleCheckIcon />
-                              Done
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
+                   
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/statistics"
+                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                      >
+                        İstatistikler
+                      </Link>
+                    </NavigationMenuLink>
+                   
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>

@@ -127,7 +127,7 @@ export function MobileNav() {
                 </div>
               </div>
             </div>
-            <nav className="mt-4 w-full text-white overflow-y-scroll h-[calc(100vh-150px)]">
+            <nav className="mt-4 w-full text-white overflow-y-auto h-[calc(100vh-150px)]">
               <ul className="flex flex-col space-y-1 px-4 gap-3">
                 <li>
                   <Link
@@ -142,19 +142,19 @@ export function MobileNav() {
                 <li>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="kanunlar">
-                      <AccordionTrigger className="py-2 text-sm font-medium">
+                      <AccordionTrigger className="py-2 text-sm font-medium cursor-pointer">
                         İlgili Kanunlar
                       </AccordionTrigger>
                       <AccordionContent className="pl-4">
                         <ul className="space-y-1">
                           {kanunlar.map((kanun) => (
-                            <li key={kanun.href}>
+                            <li key={kanun.href} className="cursor-pointer">
                               <a
                                 onClick={() => setOpen(false)}
                                 href={kanun.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block py-1 text-sm text-gray-300 hover:text-gray-200"
+                                className="block py-1 text-sm text-gray-300 hover:text-gray-200 "
                                 title={kanun.description}
                               >
                                 {kanun.title}
@@ -169,19 +169,19 @@ export function MobileNav() {
                 <li>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="yonetmelikler">
-                      <AccordionTrigger className="py-2 text-sm font-medium">
+                      <AccordionTrigger className="py-2 text-sm font-medium cursor-pointer hover:no-underline ">
                         İlgili Yönetmelikler
                       </AccordionTrigger>
                       <AccordionContent className="pl-4">
                         <ul className="space-y-1">
                           {yonetmelikler.map((yonetmelik) => (
-                            <li key={yonetmelik.href}>
+                            <li key={yonetmelik.href} className="cursor-pointer">
                               <a
                                 onClick={() => setOpen(false)}
                                 href={yonetmelik.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block py-1 text-sm  text-gray-300 hover:text-gray-200"
+                                className="block py-1 text-sm  text-gray-300 hover:text-gray-200 "
                                 title={yonetmelik.description}
                               >
                                 {yonetmelik.title}
@@ -228,6 +228,15 @@ export function MobileNav() {
                     className="block py-2 text-sm font-medium"
                   >
                     Kısıtlamalar
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href="/statistics"
+                    className="block py-2 text-sm font-medium"
+                  >
+                    İstatistikler
                   </Link>
                 </li>
               </ul>

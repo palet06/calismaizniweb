@@ -53,6 +53,11 @@ export default function Footer() {
                   Kısıtlamalar
                 </a>
               </li>
+              <li>
+                <a href="/statistics" className="hover:text-white transition-colors">
+                  İstatistikler
+                </a>
+              </li>
             </ul>
           </div>
 

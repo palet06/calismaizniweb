@@ -2,35 +2,42 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function NewsSection() {
   const news = [
     {
       id: 1,
-      title: "Yeni Dijital Hizmet Platformu Açıldı",
+      title:
+        "Hayvancılık İşletmelerinde İstihdam Edilecek Çoban ve Hayvan Bakıcıları İçin Çalışma İzni Başvuru Süreçleri",
       excerpt:
-        "Vatandaşlarımızın hizmetlere daha kolay erişimi için yeni platform hizmete girdi.",
-      date: "15 Ocak 2024",
+        "Ülkemizde hayvancılık sektörünün gelişmesi ve yerli üretimin devamlılığı için ihtiyacın yerli işgücüyle karşılanamadığı durumlarda, deneyimli yabancı çobanlara çalışma izni imkânı sağlıyoruz",
+      date: "12 Haziran 2025",
       category: "Duyuru",
       urgent: true,
+      url: "https://www.csgb.gov.tr/uigm/tr/duyurular/12062025",
     },
     {
       id: 2,
-      title: "Online Başvuru Süreçleri Güncellendi",
+      title:
+        "İşgücü Piyasasına Geçişin Desteklenmesi Projesi (İSDEP II) Kapsamında Bireysel Danışmanlık Hizmet Alımı İlanı",
       excerpt:
-        "Başvuru süreçlerimiz daha hızlı ve kullanıcı dostu hale getirildi.",
-      date: "12 Ocak 2024",
-      category: "Güncelleme",
+        "İşgücü Piyasasına Geçişin Desteklenmesi Projesi (İSDEP II) kapsamında, Uluslararası İşgücü Genel Müdürlüğünde görev almak üzere Bireysel Danışmanlık alım",
+      date: "27 Ocak 2025",
+      category: "Duyuru",
       urgent: false,
+      url: "https://www.csgb.gov.tr/uigm/tr/duyurular/27012025",
     },
     {
       id: 3,
-      title: "Sistem Bakım Duyurusu",
+      title:
+        "Uluslararası İşgücü Genel Müdürlüğü Çalışma Ve Sosyal Güvenlik Bakanlığı Çalışma İzni Belgesi/Kimlik Kartı Baskı Hizmet Alımı",
       excerpt:
-        "20 Ocak tarihinde sistem bakımı nedeniyle hizmet kesintisi yaşanacaktır.",
-      date: "10 Ocak 2024",
-      category: "Bakım",
+        "Çalışma İzni Belgesi Baskı hizmet alımı 4734 sayılı Kamu İhale Kanununun 19 uncu maddesine göre açık ihale usulü ile ihale edilecek olup, teklifler sadece elektronik ortamda EKAP üzerinden alınacaktır.",
+      date: "26 Kasım 2024",
+      category: "Duyuru",
       urgent: true,
+      url: "https://www.csgb.gov.tr/uigm/tr/duyurular/25-11-2024",
     },
   ];
 
@@ -48,10 +55,16 @@ export default function NewsSection() {
           </div>
         </div>
         <div className="w-full flex items-center justify-end mb-4">
-          <Button variant="outline">
-            Tümünü Gör
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link
+            href="https://www.csgb.gov.tr/uigm/tr/duyurular"
+            target="_blank"
+            className="text-blue-600 hover:underline"
+          >
+            <Button variant="outline">
+              Tümünü Gör
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -81,10 +94,16 @@ export default function NewsSection() {
                     <Calendar className="w-4 h-4 mr-1" />
                     <span>{item.date}</span>
                   </div>
-                  <Button variant="ghost" size="sm">
-                    Devamını Oku
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Button>
+                  <Link
+                    href={item.url}
+                    target="_blank"
+                    className="flex items-center"
+                  >
+                    <Button variant="ghost" size="sm">
+                      Devamını Oku
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

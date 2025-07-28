@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -82,9 +83,11 @@ export default function ContactSection() {
         </div>
 
         <div className="text-center mt-12">
+          <Link href="https://www.alo170.gov.tr" target="_blank">
           <Button className="bg-blue-600 hover:bg-blue-700 px-8">
             Canlı Destek
           </Button>
+          </Link>
         </div>
       </div>
     </section>
