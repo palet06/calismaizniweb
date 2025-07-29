@@ -1,3 +1,7 @@
+"use client"
+/* eslint-disable react/no-unescaped-entities */
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -10,6 +14,15 @@ import {
 import Image from "next/image";
 
 export default function HeroSection() {
+  const router = useRouter()
+  const [selectedOption, setSelectedOption] = useState("")
+
+  const handleStart = () => {
+    if (selectedOption === "work") {
+      router.push("/work-permit")
+    }
+    // Add other navigation logic for different options if needed
+  }
   return (
     <section className="relative h-[600px] overflow-hidden md:px-5">
       {/* Hero Background Image */}
@@ -51,7 +64,7 @@ export default function HeroSection() {
                 <p className="text-gray-800 font-medium mb-3">
                   Türkiye'de şunu yapmak istiyorum...
                 </p>
-                <Select>
+                <Select value={selectedOption} onValueChange={setSelectedOption}>
                   <SelectTrigger className="w-full bg-white border-gray-300">
                     <SelectValue placeholder="Lütfen seçin" />
                   </SelectTrigger>
@@ -67,7 +80,7 @@ export default function HeroSection() {
                   </SelectContent>
                 </Select>
               </div>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3">
+              <Button onClick={handleStart} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3">
                 Başla
               </Button>
             </CardContent>
