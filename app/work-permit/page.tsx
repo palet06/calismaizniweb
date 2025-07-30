@@ -142,7 +142,7 @@ export default function WorkPermitGuide() {
         "Gerekli belgelerin toplanması ve şartların kontrol edilmesi",
       details: [
         "Diploma ve denklik belgesi",
-        "Pasaport fotokopisi",
+        "Pasaport",
         "İş sözleşmesi",
         "İkamet izni (yurt içi başvuru)",
       ],
@@ -157,20 +157,11 @@ export default function WorkPermitGuide() {
         "Başvuru ücretinin ödenmesi",
       ],
     },
+    
     {
       step: 3,
-      title: "Belge Teslimi",
-      description: "Fiziki belgelerin 6 iş günü içinde teslim edilmesi",
-      details: [
-        "Orijinal belgelerin hazırlanması",
-        "Bakanlığa teslim",
-        "Takip numarası alınması",
-      ],
-    },
-    {
-      step: 4,
       title: "Değerlendirme",
-      description: "Başvurunun 30 gün içinde değerlendirilmesi",
+      description: "Başvurunun uzman tarafından değerlendirilmesi",
       details: ["Belge kontrolü", "Şartların incelenmesi", "Karar verilmesi"],
     },
   ];
@@ -786,7 +777,7 @@ export default function WorkPermitGuide() {
                     Çağrı Merkezi
                   </h3>
                   <p className="text-gray-600 mb-2">7/24 Destek Hattı</p>
-                  <p className="font-semibold text-green-600">444 0 123</p>
+                  <p className="font-semibold text-green-600">ALO 170</p>
                 </CardContent>
               </Card>
 
@@ -800,7 +791,7 @@ export default function WorkPermitGuide() {
                   </h3>
                   <p className="text-gray-600 mb-2">Detaylı Sorular İçin</p>
                   <p className="font-semibold text-blue-600">
-                    calismaizni@csgb.gov.tr
+                    eizindestek@csgb.gov.tr
                   </p>
                 </CardContent>
               </Card>
@@ -839,7 +830,7 @@ export default function WorkPermitGuide() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white text-green-600 hover:bg-gray-100 py-3 w-[180px]"
+                  className="bg-transparent text-white hover:bg-white py-3 w-[180px]"
                 >
                   ALO 170 Destek
                 </Button>
