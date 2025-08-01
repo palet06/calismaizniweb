@@ -268,8 +268,7 @@ export default function Videos() {
               Adım Adım Çalışma İzni Başvurusu
             </h1>
             <p className="text-xl text-white mb-8">
-               Her
-              adımı detaylı şekilde anlatan eğitim videolarımızla başvuru
+              Her adımı detaylı şekilde anlatan eğitim videolarımızla başvuru
               sürecinizi kolaylaştırın.
             </p>
           </div>
@@ -379,22 +378,23 @@ export default function Videos() {
             Daha Fazla Yardıma İhtiyacınız Var mı?
           </h2>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Video rehberlerimizin yanı sıra, detaylı yazılı kılavuzlarımızı da
-            inceleyebilir ve sıkça sorulan sorular bölümümüzden
+            Video rehberlerimizin yanı sıra, ALO 170 destek hattımızı arayabilir ve sıkça sorulan sorular bölümümüzden
             faydalanabilirsiniz.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-            >
-              <FileText className="h-4 w-4 mr-2" />
-              Yazılı Kılavuzlar
-            </Button>
+            <Link href="https://www.alo170.gov.tr" target="_blank">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white  w-[180px] hover:text-blue-600 bg-transparent"
+              >
+                
+                ALO 170 Destek
+              </Button>
+            </Link>
             <Link href="/faq">
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                className="border-white text-white hover:bg-white  w-[180px] hover:text-blue-600 bg-transparent"
               >
                 Sıkça Sorulan Sorular
               </Button>
