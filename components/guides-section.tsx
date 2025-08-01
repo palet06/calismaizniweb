@@ -1,13 +1,19 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen, Download, Video, HelpCircle, FileText } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { BookOpen, Download, Video, HelpCircle, FileText } from "lucide-react";
+import Link from "next/link";
+
+import { DownloadDropdown } from "@/components/DownloadDropdown";
+import { DownloadGuides } from "./DownloadGuides";
 
 export default function GuidesSection() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Kullanım Kılavuzları</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Kullanım Kılavuzları
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Hizmetlerimizi daha etkili kullanmanız için hazırladığımız rehberler
           </p>
@@ -21,12 +27,12 @@ export default function GuidesSection() {
               </div>
               <CardTitle className="text-lg">Başvuru Rehberi</CardTitle>
             </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-gray-600 text-sm mb-4">Adım adım başvuru süreci</p>
-              <Button variant="outline" size="sm" className="w-full bg-transparent">
-                <Download className="w-4 h-4 mr-2" />
-                İndir
-              </Button>
+            <CardContent className="text-center ">
+              <p className="text-gray-600 text-sm mb-4">
+                Adım adım başvuru süreci
+              </p>
+
+              <DownloadGuides />
             </CardContent>
           </Card>
 
@@ -38,8 +44,14 @@ export default function GuidesSection() {
               <CardTitle className="text-lg">Video Eğitimler</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-gray-600 text-sm mb-4">Görsel eğitim videoları</p>
-              <Button variant="outline" size="sm" className="w-full bg-transparent">
+              <p className="text-gray-600 text-sm mb-4">
+                Görsel eğitim videoları
+              </p>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full bg-transparent"
+              >
                 <Video className="w-4 h-4 mr-2" />
                 İzle
               </Button>
@@ -55,10 +67,16 @@ export default function GuidesSection() {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-gray-600 text-sm mb-4">Sık sorulan sorular</p>
-              <Button variant="outline" size="sm" className="w-full bg-transparent">
-                <HelpCircle className="w-4 h-4 mr-2" />
-                Görüntüle
-              </Button>
+              <Link href="/faq">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full bg-transparent"
+                >
+                  <HelpCircle className="w-4 h-4 mr-2" />
+                  Görüntüle
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -70,15 +88,14 @@ export default function GuidesSection() {
               <CardTitle className="text-lg">Formlar</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-gray-600 text-sm mb-4">İndirilebilir form şablonları</p>
-              <Button variant="outline" size="sm" className="w-full bg-transparent">
-                <Download className="w-4 h-4 mr-2" />
-                İndir
-              </Button>
+              <p className="text-gray-600 text-sm mb-4">
+                İndirilebilir form şablonları
+              </p>
+              <DownloadDropdown />
             </CardContent>
           </Card>
         </div>
       </div>
     </section>
-  )
+  );
 }
