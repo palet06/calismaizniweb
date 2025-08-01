@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import { useState } from "react";
+import SearchSection from "./SearchSection";
 
 const kanunlar: { title: string; href: string; description: string }[] = [
   {
@@ -127,7 +128,13 @@ export function MobileNav() {
                 </div>
               </div>
             </div>
-            <nav className="mt-4 w-full text-white overflow-y-auto h-[calc(100vh-150px)]">
+            <div className="p-2">
+
+            <SearchSection classNameProp="lg:hidden " classNameProp2="lg:hidden flex flex-row justify-center gap-2  items-center space-x-4 text-white" />
+            </div>
+                
+
+            <nav className="mt-4 w-full text-white overflow-y-auto  h-[calc(100vh-150px)]">
               <ul className="flex flex-col space-y-1 px-4 gap-3">
                 <li>
                   <Link
@@ -241,6 +248,10 @@ export function MobileNav() {
                 </li>
               </ul>
             </nav>
+            
+
+            
+            
           </SheetTitle>
         </SheetContent>
       </Sheet>

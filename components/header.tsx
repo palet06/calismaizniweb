@@ -22,6 +22,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
+import SearchSection from "./SearchSection";
 
 export default function Header() {
   const [activeMode, setActiveMode] = useState<"workers" | "employers">(
@@ -170,59 +171,7 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* Right section */}
-              <div className="flex items-center space-x-6">
-                {/* Contact icons */}
-                <div className="hidden md:flex items-center space-x-4">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="p-2 text-white  hover:text-blue-800"
-                  >
-                    <Mail className="w-5 h-5 " />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="p-2t text-white  hover:text-blue-800"
-                  >
-                    <Phone className="w-5 h-5 " />
-                  </Button>
-                  <Link href="/faq">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-white hover:text-blue-800"
-                    >
-                      SSS
-                    </Button>
-                  </Link>
-                </div>
-
-                <div className="hidden md:flex items-center">
-                  <div className="relative">
-                    <Input
-                      placeholder="Konu ara..."
-                      className="w-64 pr-12 border-slate-400"
-                    />
-                    <Button
-                      size="sm"
-                      className="absolute right-0 top-0 h-full px-3 bg-transparent hover:bg-blue-600"
-                    >
-                      <Search className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </div>
-
-                <div className="hidden md:flex items-center space-x-2 text-sm">
-                  <span className="font-bold text-white/75 border-b-2 border-white/75 pb-1">
-                    TR
-                  </span>
-                  <span className="text-gray-500 hover:text-blue-600 cursor-pointer">
-                    EN
-                  </span>
-                </div>
-              </div>
+             <SearchSection classNameProp="hidden md:flex items-center space-x-6" classNameProp2="md:flex items-center space-x-4" />
             </div>
           </div>
         </div>
