@@ -1,11 +1,17 @@
-"use client"
+"use client";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Mail, Phone, Search } from "lucide-react";
+import { Mail, Search, TvMinimalPlay } from "lucide-react";
 import { Input } from "./ui/input";
 
-const SearchSection = ({classNameProp,classNameProp2}:{classNameProp:string,classNameProp2:string}) => {
+const SearchSection = ({
+  classNameProp,
+  classNameProp2,
+}: {
+  classNameProp: string;
+  classNameProp2: string;
+}) => {
   return (
     <div className={classNameProp}>
       {/* Contact icons */}
@@ -17,13 +23,15 @@ const SearchSection = ({classNameProp,classNameProp2}:{classNameProp:string,clas
         >
           <Mail className="w-5 h-5 " />
         </Button>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="p-2t text-white  hover:text-blue-800"
-        >
-          <Phone className="w-5 h-5 " />
-        </Button>
+        <Link href="/videos">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="p-2t text-white  hover:text-blue-800"
+          >
+            <TvMinimalPlay className="w-5 h-5 " />
+          </Button>
+        </Link>
         <Link href="/faq">
           <Button
             variant="ghost"

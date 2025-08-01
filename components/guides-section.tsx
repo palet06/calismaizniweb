@@ -47,14 +47,16 @@ export default function GuidesSection() {
               <p className="text-gray-600 text-sm mb-4">
                 Görsel eğitim videoları
               </p>
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-full bg-transparent"
-              >
-                <Video className="w-4 h-4 mr-2" />
-                İzle
-              </Button>
+              <Link href="/videos">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full bg-transparent"
+                >
+                  <Video className="w-4 h-4 mr-2" />
+                  İzle
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
