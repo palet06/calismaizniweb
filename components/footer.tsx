@@ -70,7 +70,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/faq" className="hover:text-white transition-colors">
                   SSS
                 </a>
               </li>

@@ -239,12 +239,12 @@ export default function WorkPermitGuide() {
               onValueChange={setActiveTab}
               className="w-full"
             >
-              <TabsList className="grid w-full grid-cols-5">
-                <TabsTrigger value="overview">Genel Bakış</TabsTrigger>
-                <TabsTrigger value="types">İzin Türleri</TabsTrigger>
-                <TabsTrigger value="exemptions">Muafiyetler</TabsTrigger>
-                <TabsTrigger value="application">Başvuru</TabsTrigger>
-                <TabsTrigger value="responsibilities">
+              <TabsList className="grid w-full grid-cols-5 bg-gray-200 ">
+                <TabsTrigger className="cursor-pointer" value="overview">Genel Bakış</TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="types">İzin Türleri</TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="exemptions">Muafiyetler</TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="application">Başvuru</TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="responsibilities">
                   Sorumluluklar
                 </TabsTrigger>
               </TabsList>

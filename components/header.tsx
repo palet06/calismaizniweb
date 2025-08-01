@@ -15,7 +15,7 @@ import {
   Home,
 } from "lucide-react";
 
-import { Search,  Phone, Mail } from "lucide-react";
+import { Search, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -27,7 +27,6 @@ export default function Header() {
   const [activeMode, setActiveMode] = useState<"workers" | "employers">(
     "workers"
   );
-  
 
   const kanunlar: { title: string; href: string; description: string }[] = [
     {
@@ -189,13 +188,15 @@ export default function Header() {
                   >
                     <Phone className="w-5 h-5 " />
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-white hover:text-blue-800"
-                  >
-                    SSS
-                  </Button>
+                  <Link href="/faq">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-white hover:text-blue-800"
+                    >
+                      SSS
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className="hidden md:flex items-center">
@@ -311,7 +312,6 @@ export default function Header() {
                         İzin Şerhleri
                       </Link>
                     </NavigationMenuLink>
-                    
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
@@ -322,7 +322,6 @@ export default function Header() {
                         Kısıtlamalar
                       </Link>
                     </NavigationMenuLink>
-                   
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
@@ -333,7 +332,6 @@ export default function Header() {
                         İstatistikler
                       </Link>
                     </NavigationMenuLink>
-                   
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
