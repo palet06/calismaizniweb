@@ -25,6 +25,9 @@ export default function HeroSection() {
       case "study":
          router.push("/intern-education")
         break;
+      case "tech":
+         router.push("/tech-visa")
+        break;
     
       default:
         break;
