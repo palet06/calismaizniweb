@@ -28,6 +28,9 @@ export default function HeroSection() {
       case "tech":
          router.push("/tech-visa")
         break;
+      case "talent":
+         router.push("/talent-transfer")
+        break;
     
       default:
         break;
@@ -88,7 +91,7 @@ export default function HeroSection() {
                     <SelectItem value="tech">
                       Teknoloji girişimleri / TechVisa
                     </SelectItem>
-                    <SelectItem value="ability">Yetenek transferi</SelectItem>
+                    <SelectItem value="talent">Yetenek transferi</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

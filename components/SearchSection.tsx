@@ -16,13 +16,13 @@ const SearchSection = ({
     <div className={classNameProp}>
       {/* Contact icons */}
       <div className={classNameProp2}>
-        <Button
+        {/* <Button
           variant="ghost"
           size="sm"
           className="p-2 text-white  hover:text-blue-800"
         >
           <Mail className="w-5 h-5 " />
-        </Button>
+        </Button> */}
         <Link href="/videos">
           <Button
             variant="ghost"
