@@ -18,9 +18,18 @@ export default function HeroSection() {
   const [selectedOption, setSelectedOption] = useState("")
 
   const handleStart = () => {
-    if (selectedOption === "work") {
-      router.push("/work-permit")
+    switch (selectedOption) {
+      case "work":
+         router.push("/work-permit")
+        break;
+      case "study":
+         router.push("/intern-education")
+        break;
+    
+      default:
+        break;
     }
+    
     // Add other navigation logic for different options if needed
   }
   return (
