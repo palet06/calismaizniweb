@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 
 import {
   NavigationMenu,
@@ -8,23 +9,32 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import {
-  CircleCheckIcon,
-  CircleHelpIcon,
-  CircleIcon,
-  Home,
-} from "lucide-react";
+import { Home } from "lucide-react";
 
-import { Search, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
 import SearchSection from "./SearchSection";
+import path from "path";
 
 export default function Header() {
+  const pathname = usePathname();
+  const [activeMenuItem, setActiveMenuItem] = useState("/");
+  useEffect(() => {
+    const checkActiveMenuItem = () => {
+      if (pathname !== activeMenuItem) {
+        setActiveMenuItem("");
+      } else {
+        setActiveMenuItem(pathname);
+      }
+    };
+
+    checkActiveMenuItem();
+  }, [pathname]);
+
   const [activeMode, setActiveMode] = useState<"workers" | "employers">(
     "workers"
   );
@@ -171,7 +181,10 @@ export default function Header() {
                 </div>
               </div>
 
-             <SearchSection classNameProp="hidden md:flex items-center space-x-6" classNameProp2="md:flex items-center space-x-4" />
+              <SearchSection
+                classNameProp="hidden md:flex items-center space-x-6"
+                classNameProp2="md:flex items-center space-x-4"
+              />
             </div>
           </div>
         </div>
@@ -189,7 +202,7 @@ export default function Header() {
                     <NavigationMenuLink asChild>
                       <Link
                         href="/"
-                        className=" hover:bg-white hover:text-black"
+                        className="hover:bg-white hover:text-black whitespace-nowrap "
                       >
                         <Home className="size-5 hover:text-black " />
                       </Link>
@@ -235,18 +248,12 @@ export default function Header() {
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/#tech"
-                        className=" hover:bg-white hover:text-black whitespace-nowrap"
-                      >
-                        TECHVISA
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
                         href="/criteria"
-                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                        className={` hover:bg-white hover:text-black whitespace-nowrap ${
+                          activeMenuItem === "/criteria" &&
+                          "bg-white text-black"
+                        }`}
+                        onClick={() => setActiveMenuItem("/criteria")}
                       >
                         Değerlendirme Kriterleri
                       </Link>
@@ -256,7 +263,11 @@ export default function Header() {
                     <NavigationMenuLink asChild>
                       <Link
                         href="/annotations"
-                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                        className={` hover:bg-white hover:text-black whitespace-nowrap ${
+                          activeMenuItem === "/annotations" &&
+                          "bg-white text-black"
+                        }`}
+                        onClick={() => setActiveMenuItem("/annotations")}
                       >
                         İzin Şerhleri
                       </Link>
@@ -266,7 +277,13 @@ export default function Header() {
                     <NavigationMenuLink asChild>
                       <Link
                         href="/restricted-professions"
-                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                        className={` hover:bg-white hover:text-black whitespace-nowrap ${
+                          activeMenuItem === "/restricted-professions" &&
+                          "bg-white text-black"
+                        }`}
+                        onClick={() =>
+                          setActiveMenuItem("/restricted-professions")
+                        }
                       >
                         Kısıtlamalar
                       </Link>
@@ -276,9 +293,26 @@ export default function Header() {
                     <NavigationMenuLink asChild>
                       <Link
                         href="/statistics"
-                        className=" hover:bg-white hover:text-black whitespace-nowrap"
+                        className={` hover:bg-white hover:text-black whitespace-nowrap ${
+                          activeMenuItem === "/statistics" &&
+                          "bg-white text-black"
+                        }`}
+                        onClick={() => setActiveMenuItem("/statistics")}
                       >
                         İstatistikler
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/contact"
+                        className={` hover:bg-white hover:text-black whitespace-nowrap ${
+                          activeMenuItem === "/contact" && "bg-white text-black"
+                        }`}
+                        onClick={() => setActiveMenuItem("/contact")}
+                      >
+                        İletişim
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>

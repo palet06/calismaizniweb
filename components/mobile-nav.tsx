@@ -201,15 +201,7 @@ export function MobileNav() {
                   </Accordion>
                 </li>
 
-                <li>
-                  <Link
-                    onClick={() => setOpen(false)}
-                    href="/#tech"
-                    className="block py-2 text-sm font-medium"
-                  >
-                    TECHVISA
-                  </Link>
-                </li>
+                
                 <li>
                   <Link
                     onClick={() => setOpen(false)}
@@ -244,6 +236,15 @@ export function MobileNav() {
                     className="block py-2 text-sm font-medium"
                   >
                     İstatistikler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href="/contact"
+                    className="block py-2 text-sm font-medium"
+                  >
+                    İletişim 
                   </Link>
                 </li>
               </ul>
