@@ -326,7 +326,7 @@ export default function InternEducation() {
                         <CardTitle className="text-xl text-gray-900">
                           {level.level}
                         </CardTitle>
-                        <div className="flex items-center space-x-4 mt-2">
+                        <div className="flex flex-col lg:flex-row  lg:items-center space-x-4 mt-2">
                           <Badge variant="outline" className="text-xs">
                             <Clock className="w-3 h-3 mr-1" />
                             {level.duration}
@@ -374,15 +374,19 @@ export default function InternEducation() {
               onValueChange={setActiveTab}
               className="w-full"
             >
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger className="cursor-pointer" value="overview">Genel Bakış</TabsTrigger>
+              <TabsList className="grid w-full  gap-1 grid-cols-2 lg:grid-cols-4">
+                <TabsTrigger className="cursor-pointer" value="overview">
+                  Genel Bakış
+                </TabsTrigger>
                 <TabsTrigger className="cursor-pointer" value="domestic">
                   Türkiye'deki Öğrenciler
                 </TabsTrigger>
                 <TabsTrigger className="cursor-pointer" value="international">
                   Yurtdışındaki Öğrenciler
                 </TabsTrigger>
-                <TabsTrigger className="cursor-pointer" value="process">Başvuru Süreci</TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="process">
+                  Başvuru Süreci
+                </TabsTrigger>
               </TabsList>
 
               <TabsContent value="overview" className="mt-6">
@@ -628,7 +632,7 @@ export default function InternEducation() {
             <p className="text-xl text-blue-100 mb-8">
               Dünya standartlarında eğitim ve staj imkanları sizi bekliyor
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-start">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button

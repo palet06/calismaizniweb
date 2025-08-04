@@ -730,7 +730,7 @@ export default function WorkPermitStatistics() {
               Daha detaylı istatistiksel veriler ve analizler için raporlarımızı
               inceleyebilirsiniz
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-start">
               <Button
                 size="lg"
                 variant="outline"

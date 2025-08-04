@@ -6,14 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+
 import {
   FileText,
   Users,
@@ -239,7 +232,7 @@ export default function WorkPermitGuide() {
               onValueChange={setActiveTab}
               className="w-full"
             >
-              <TabsList className="grid w-full grid-cols-5 bg-gray-200 ">
+              <TabsList className="grid w-full grid-cols-3 md:grid-cols-5 bg-gray-200 ">
                 <TabsTrigger className="cursor-pointer" value="overview">Genel Bakış</TabsTrigger>
                 <TabsTrigger className="cursor-pointer" value="types">İzin Türleri</TabsTrigger>
                 <TabsTrigger className="cursor-pointer" value="exemptions">Muafiyetler</TabsTrigger>
