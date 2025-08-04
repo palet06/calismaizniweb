@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center justify-center">
-                <Link href="/" >
+                <Link href="/home" >
                 <Image
                   src="csgb-logo.svg"
                   alt="CSGB Logo"

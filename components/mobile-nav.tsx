@@ -139,7 +139,7 @@ export function MobileNav() {
                 <li>
                   <Link
                     onClick={() => setOpen(false)}
-                    href="/"
+                    href="/home"
                     className="block py-2 text-sm font-medium"
                   >
                     Anasayfa

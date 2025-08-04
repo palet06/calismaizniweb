@@ -18,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
 import SearchSection from "./SearchSection";
-import path from "path";
+
 
 export default function Header() {
   const pathname = usePathname();
@@ -160,7 +160,7 @@ export default function Header() {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-3">
                   <div className=" text-white flex items-center justify-center">
-                    <Link href="/">
+                    <Link href="/home">
                       <Image
                         src="csgb-logo.svg"
                         alt="CSGB Logo"
@@ -201,7 +201,7 @@ export default function Header() {
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/"
+                        href="/home"
                         className="hover:bg-white hover:text-black whitespace-nowrap "
                       >
                         <Home className="size-5 hover:text-black " />
