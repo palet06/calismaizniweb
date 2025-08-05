@@ -88,7 +88,7 @@ export default function Header() {
         href: "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=39337&MevzuatTur=7&MevzuatTertip=5",
         description:
           "Resmî Gazete Tarihi: 02.02.2022 Resmî Gazete Sayısı: 31738",
-      },,
+      },
       {
         title:
           "Doğrudan Yabancı Yatırımlarda Yabancı Uyruklu Personel İstihdamı Hakkında Yönetmelik",

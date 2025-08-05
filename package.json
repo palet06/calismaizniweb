@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "out":"next /out",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
@@ -55,7 +58,8 @@
     "sonner": "^2.0.6",
     "tailwind-merge": "^3.3.1",
     "vaul": "^1.1.2",
-    "zod": "^4.0.5"
+    "zod": "^4.0.5",
+    "gsap": "^3.12.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
