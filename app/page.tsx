@@ -106,7 +106,7 @@ export default function LandingPage() {
                           ilgili detaylı bilgi almak için sitemizi ziyaret edebilirsiniz.
                         </p>
                       </div>
-                      <Link href="/work-permit" target="_self">
+                      <Link href="/home" target="_self">
                         <Button className="w-full bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 font-semibold">
                           <ExternalLink className="w-3 h-3 mr-1" />
                           Git
