@@ -331,7 +331,7 @@ export default function WorkPermitStatistics() {
       </section>
 
       {/* Document Type Distribution */}
-      {/* {selectedYear === "2024" && (
+      {selectedYear === "2024" && (
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -415,7 +415,7 @@ export default function WorkPermitStatistics() {
             </div>
           </div>
         </section>
-      )} */}
+      )}
 
       {/* Gender Distribution */}
       <section className="py-12 bg-white">
@@ -489,7 +489,7 @@ export default function WorkPermitStatistics() {
 
       {/* Education Level Distribution */}
 
-      {/* {selectedYear === "2024" && (
+      {selectedYear === "2024" && (
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -520,7 +520,7 @@ export default function WorkPermitStatistics() {
             </div>
           </div>
         </section>
-      )} */}
+      )}
 
       {/* Top Nationalities */}
       {selectedYear === "2024" && (
@@ -608,7 +608,7 @@ export default function WorkPermitStatistics() {
                   <CardTitle>Aylık Çalışma İzni Sayıları</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {/* <ResponsiveContainer width="100%" height={400}>
+                  <ResponsiveContainer width="100%" height={400}>
                     <LineChart data={currentData.monthlyData}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="month" />
@@ -626,7 +626,7 @@ export default function WorkPermitStatistics() {
                         strokeWidth={3}
                       />
                     </LineChart>
-                  </ResponsiveContainer> */}
+                  </ResponsiveContainer>
                 </CardContent>
               </Card>
             </div>
@@ -655,7 +655,7 @@ export default function WorkPermitStatistics() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    {/* <ResponsiveContainer width="100%" height={400}>
+                    <ResponsiveContainer width="100%" height={400}>
                       <BarChart data={currentData.topProvinces.slice(0, 8)}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis
@@ -673,7 +673,7 @@ export default function WorkPermitStatistics() {
                         />
                         <Bar dataKey="count" fill="#8B5CF6" />
                       </BarChart>
-                    </ResponsiveContainer> */}
+                    </ResponsiveContainer>
                   </CardContent>
                 </Card>
 
@@ -683,7 +683,7 @@ export default function WorkPermitStatistics() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      {/* {currentData.topProvinces
+                      {currentData.topProvinces
                         .slice(0, 10)
                         .map((item, index) => (
                           <div
@@ -711,7 +711,7 @@ export default function WorkPermitStatistics() {
                               </div>
                             </div>
                           </div>
-                        ))} */}
+                        ))}
                     </div>
                   </CardContent>
                 </Card>
