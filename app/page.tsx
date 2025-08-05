@@ -425,7 +425,7 @@ export default function LandingPage() {
                   Sizlere her konuda yardımcı olmak isteriz
                 </p>
                 <Link href="/faq">
-                  <Button className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold">
+                  <Button className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold w-full sm:w-auto">
                     İncele
                   </Button>
                 </Link>
