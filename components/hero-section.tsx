@@ -56,8 +56,8 @@ export default function HeroSection() {
           loop
           muted
           className="absolute z-10 w-auto min-w-full min-h-full max-w-none blur-xs grayscale-50"
-        ></video> */}
-      
+        ></video>
+       */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       </div>
 

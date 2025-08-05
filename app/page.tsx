@@ -14,7 +14,7 @@ import Link from "next/link";
 export default function LandingPage() {
   return (
     <div
-      className="min-h-screen relative  "
+      className="sm:h-screen min-h-screen relative  "
       style={{
         backgroundImage: `url('imported/pattern-1.jpg')`,
         backgroundSize: "cover",
@@ -22,24 +22,24 @@ export default function LandingPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="contailner mx-auto h-full relative ">
+      
         {/* Overlay for better readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-blue-800/20 to-purple-900/30"></div>
 
-        <div className="relative z-10 h-full flex flex-col">
+        <div className="relative z-10 h-full flex flex-col ">
           {/* Logo Section */}
           <div className="text-center py-4">
             <Image
               className="mx-auto"
               src="imported/beyaz-logo.svg"
-              height={40}
-              width={300}
+              height={45}
+              width={350}
               alt="CSGB Logo"
             />
           </div>
 
           {/* Main Content - Flex grow to fill remaining space */}
-          <div className="flex-1 flex flex-col justify-center px-4 max-w-7xl mx-auto w-full ">
+          <div className="flex-1 flex flex-col justify-center px-4 max-w-6xl mx-auto w-full  ">
             {/* Main Cards Grid - Matching Template Layout */}
             <div className="grid grid-cols-12 gap-4 mb-6">
               {/* Left Side - Large Çalışma İzni Card (6 columns) */}
@@ -80,7 +80,7 @@ export default function LandingPage() {
                     <Button
                       className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30 py-2 font-semibold"
                       onClick={() =>
-                        window.open("https://ecalismaizni.csgb.gov.tr/eizin", "_blank")
+                        window.open("https://test-eizin.csgb.gov.tr", "_blank")
                       }
                     >
                       <Send className="w-4 h-4 mr-2" />
@@ -106,7 +106,7 @@ export default function LandingPage() {
                           ilgili detaylı bilgi almak için sitemizi ziyaret edebilirsiniz.
                         </p>
                       </div>
-                      <Link href="/home">
+                      <Link href="/work-permit" target="_self">
                         <Button className="w-full bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 font-semibold">
                           <ExternalLink className="w-3 h-3 mr-1" />
                           Git
@@ -272,7 +272,7 @@ export default function LandingPage() {
             </div> */}
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
