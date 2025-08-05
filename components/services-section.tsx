@@ -62,6 +62,7 @@ export default function ServicesSection() {
               width={550}
               height={400}
               className="rounded-lg shadow-lg"
+              unoptimized
             />
           </div>
         </div>

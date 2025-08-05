@@ -13,6 +13,7 @@ export default function AboutSection() {
               width={500}
               height={400}
               className="rounded-lg shadow-lg"
+              unoptimized
             />
           </div>
           <div className="sm:flex sm:flex-col sm:items-center md:block md:items-start">

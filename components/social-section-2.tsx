@@ -115,6 +115,7 @@ export function SocialSection2() {
                               alt={slide.imageAlt}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              unoptimized
                             />
                           </div>
                           <div className="p-6">

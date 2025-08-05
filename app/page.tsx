@@ -291,7 +291,7 @@ export default function LandingPage() {
         </div>
 
         {/* Right Side - 4 Small Cards */}
-        <div className="col-span-12 lg:col-span-6">
+        <div className="col-span-12 lg:col-span-6 shrink">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 h-full">
             {/* Bilgi Al */}
             <Card className="bg-gradient-to-br from-orange-500 to-orange-600 border-0 text-white shadow-lg hover:shadow-xl hover:scale-[102%] transition-all duration-300">

@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
-    "out":"next /out",
+    
+    "out":"npx next out",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {

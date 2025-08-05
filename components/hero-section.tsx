@@ -48,6 +48,7 @@ export default function HeroSection() {
           alt="Çalışma Hero"
           fill
           className="object-cover"
+          unoptimized
           
         />
         {/* <video

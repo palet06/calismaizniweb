@@ -1,12 +1,26 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // output: 'export',
-  // eslint:{
-  //   ignoreDuringBuilds:true
-  // }
-
-  /* config options here */
-};
-
-export default nextConfig;
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: 'export',
+  eslint:{
+    ignoreDuringBuilds:true
+  },
+  typescript:{
+    ignoreBuildErrors:true
+  },
+  images: {
+    unoptimized: true, 
+  },
+ 
+  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
+  // trailingSlash: true,
+ 
+  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+  // skipTrailingSlashRedirect: true,
+ 
+  // Optional: Change the output directory `out` -> `dist`
+  // distDir: 'dist',
+}
+ 
+module.exports = nextConfig

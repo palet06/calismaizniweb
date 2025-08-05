@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+Dockerfile
+.dockerignore
+*.log
+.git
+.gitignore
+README.md
+build-ignore-errors.sh
