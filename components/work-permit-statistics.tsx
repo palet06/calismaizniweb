@@ -4,7 +4,6 @@
 
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -34,93 +33,14 @@ import {
   GraduationCap,
   MapPin,
   Calendar,
-  FileText,
   Download,
   BarChart3,
   PieChartIcon,
 } from "lucide-react";
+import { definitions, statisticsData } from "@/lib/statisticsData";
 
 export default function WorkPermitStatistics() {
   const [selectedYear, setSelectedYear] = useState("2024");
-
-  // Statistical data based on the PDF
-  const statisticsData = {
-    "2024": {
-      total: 300852,
-      byDocumentType: [
-        { type: "Çalışma İzni", count: 300852, percentage: 69.4 },
-        { type: "Serbest Bölge", count: 435, percentage: 0.1 },
-        { type: "Muafiyet", count: 11912, percentage: 2.7 },
-        { type: "Muafiyet Bilgi Formu", count: 120284, percentage: 27.7 },
-      ],
-      byGender: [
-        { gender: "Erkek", count: 213491, percentage: 71.0 },
-        { gender: "Kadın", count: 87361, percentage: 29.0 },
-      ],
-      byEducation: [
-        { level: "İlkokul", count: 58554 },
-        { level: "Ortaokul", count: 55176 },
-        { level: "Lise ve Dengi", count: 117563 },
-        { level: "Ön Lisans", count: 9301 },
-        { level: "Lisans", count: 49257 },
-        { level: "Yüksek Lisans", count: 8696 },
-        { level: "Doktora", count: 2305 },
-      ],
-      topNationalities: [
-        { country: "Suriye", count: 117334 },
-        { country: "Türkmenistan", count: 32276 },
-        { country: "Rusya", count: 17267 },
-        { country: "Özbekistan", count: 15644 },
-        { country: "Kırgızistan", count: 10869 },
-        { country: "İran", count: 10466 },
-        { country: "Endonezya", count: 8930 },
-        { country: "Kazakistan", count: 8597 },
-        { country: "Afganistan", count: 8335 },
-        { country: "Azerbaycan", count: 7560 },
-      ],
-      topProvinces: [
-        { province: "İstanbul", count: 103025 },
-        { province: "Antalya", count: 35953 },
-        { province: "Mersin", count: 30079 },
-        { province: "Bursa", count: 18296 },
-        { province: "Ankara", count: 15121 },
-        { province: "Gaziantep", count: 14879 },
-        { province: "İzmir", count: 8733 },
-        { province: "Kocaeli", count: 8250 },
-        { province: "Konya", count: 6881 },
-        { province: "Muğla", count: 6635 },
-      ],
-      monthlyData: [
-        { month: "Ocak", count: 18777 },
-        { month: "Şubat", count: 20784 },
-        { month: "Mart", count: 25931 },
-        { month: "Nisan", count: 22089 },
-        { month: "Mayıs", count: 28557 },
-        { month: "Haziran", count: 20235 },
-        { month: "Temmuz", count: 25293 },
-        { month: "Ağustos", count: 22633 },
-        { month: "Eylül", count: 24672 },
-        { month: "Ekim", count: 33048 },
-        { month: "Kasım", count: 30059 },
-        { month: "Aralık", count: 28774 },
-      ],
-    },
-    "2023": {
-      total: 239835,
-      byGender: [
-        { gender: "Erkek", count: 173536, percentage: 72.4 },
-        { gender: "Kadın", count: 66299, percentage: 27.6 },
-      ],
-    },
-    "2022": {
-      total: 212682,
-      byGender: [
-        { gender: "Erkek", count: 154853, percentage: 72.8 },
-        { gender: "Kadın", count: 57829, percentage: 27.2 },
-      ],
-    },
-  };
-
   const currentData =
     statisticsData[selectedYear as keyof typeof statisticsData];
 
@@ -135,30 +55,8 @@ export default function WorkPermitStatistics() {
     "#84CC16",
   ];
 
-  const definitions = [
-    {
-      term: "Yabancı",
-      definition:
-        "Türkiye Cumhuriyeti Devleti ile vatandaşlık bağı bulunmayan kişi.",
-      icon: <Globe className="w-5 h-5" />,
-    },
-    {
-      term: "Çalışma İzni",
-      definition:
-        "Çalışma ve Sosyal Güvenlik Bakanlığınca resmi bir belge şeklinde düzenlenen ve geçerlilik süresi içinde yabancıya Türkiye'de çalışma ve ikamet hakkı veren izin.",
-      icon: <FileText className="w-5 h-5" />,
-    },
-    {
-      term: "Çalışma İzni Muafiyeti",
-      definition:
-        "Çalışma ve Sosyal Güvenlik Bakanlığınca resmi bir belge şeklinde düzenlenen ve geçerlilik süresi içinde yabancıya Türkiye'de çalışma izni almaksızın çalışma ve ikamet hakkı veren muafiyet.",
-      icon: <Users className="w-5 h-5" />,
-    },
-  ];
-
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -178,7 +76,6 @@ export default function WorkPermitStatistics() {
         </div>
       </section>
 
-      {/* Year Selection */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -222,7 +119,6 @@ export default function WorkPermitStatistics() {
         </div>
       </section>
 
-      {/* Definitions */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -260,7 +156,6 @@ export default function WorkPermitStatistics() {
         </div>
       </section>
 
-      {/* Overview Statistics */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -330,7 +225,6 @@ export default function WorkPermitStatistics() {
         </div>
       </section>
 
-      {/* Document Type Distribution */}
       {selectedYear === "2024" && (
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -417,7 +311,6 @@ export default function WorkPermitStatistics() {
         </section>
       )}
 
-      {/* Gender Distribution */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -487,15 +380,17 @@ export default function WorkPermitStatistics() {
         </div>
       </section>
 
-      {/* Education Level Distribution */}
-
       {selectedYear === "2024" && (
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Eğitim Düzeyine Göre Dağılım</h2>
-                <p className="text-gray-600">Çalışma izni sahiplerinin eğitim durumu</p>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Eğitim Düzeyine Göre Dağılım
+                </h2>
+                <p className="text-gray-600">
+                  Çalışma izni sahiplerinin eğitim durumu
+                </p>
               </div>
 
               <Card>
@@ -507,11 +402,19 @@ export default function WorkPermitStatistics() {
                 </CardHeader>
                 <CardContent>
                   <ResponsiveContainer width="100%" height={400}>
-                    <BarChart data={currentData.byEducation} layout="horizontal">
+                    <BarChart
+                      data={currentData.byEducation}
+                      layout="horizontal"
+                    >
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis type="number" />
                       <YAxis dataKey="level" type="category" width={120} />
-                      <Tooltip formatter={(value: any) => [value.toLocaleString(), "Sayı"]} />
+                      <Tooltip
+                        formatter={(value: any) => [
+                          value.toLocaleString(),
+                          "Sayı",
+                        ]}
+                      />
                       <Bar dataKey="count" fill="#10B981" />
                     </BarChart>
                   </ResponsiveContainer>
@@ -522,7 +425,6 @@ export default function WorkPermitStatistics() {
         </section>
       )}
 
-      {/* Top Nationalities */}
       {selectedYear === "2024" && (
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -555,7 +457,7 @@ export default function WorkPermitStatistics() {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-200">
-                        {/* {currentData.topNationalities.map((item, index) => (
+                        {currentData.topNationalities.map((item, index) => (
                           <tr
                             key={index}
                             className={
@@ -578,7 +480,7 @@ export default function WorkPermitStatistics() {
                               %
                             </td>
                           </tr>
-                        ))} */}
+                        ))}
                       </tbody>
                     </table>
                   </div>
@@ -589,7 +491,6 @@ export default function WorkPermitStatistics() {
         </section>
       )}
 
-      {/* Monthly Distribution */}
       {selectedYear === "2024" && (
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -634,7 +535,6 @@ export default function WorkPermitStatistics() {
         </section>
       )}
 
-      {/* Top Provinces */}
       {selectedYear === "2024" && (
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -721,7 +621,6 @@ export default function WorkPermitStatistics() {
         </section>
       )}
 
-      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">

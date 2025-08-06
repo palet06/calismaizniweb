@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+/* eslint-disable react/no-unescaped-entities */
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -16,9 +17,13 @@ export default function AboutSection() {
             />
           </div>
           <div className="sm:flex sm:flex-col sm:items-center md:block md:items-start">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Türkiye'de Çalışmak</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Türkiye'de Çalışmak
+            </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-             Türkiye, dinamik ekonomisi ve stratejik konumuyla iş fırsatları sunan bir ülkedir. Gelişen sektörleri ve genç iş gücüyle yabancılar için cazip çalışma ortamları sağlar.
+              Türkiye, dinamik ekonomisi ve stratejik konumuyla iş fırsatları
+              sunan bir ülkedir. Gelişen sektörleri ve genç iş gücüyle
+              yabancılar için cazip çalışma ortamları sağlar.
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-gray-700">
@@ -34,10 +39,12 @@ export default function AboutSection() {
                 Zengin kültürel deneyim ve stratejik coğrafi konum
               </li>
             </ul>
-            <Button className="bg-blue-600 hover:bg-blue-700">Daha Fazla Bilgi</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              Daha Fazla Bilgi
+            </Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,8 @@
-import WorkPermitStatistics from '@/components/work-permit-statistics'
-import React from 'react'
+import WorkPermitStatistics from "@/components/work-permit-statistics";
+import React from "react";
 
 const Statistics = () => {
-  return (
-    <WorkPermitStatistics />
-  )
-}
+  return <WorkPermitStatistics />;
+};
 
-export default Statistics
+export default Statistics;

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Download, Video, HelpCircle, FileText } from "lucide-react";
+import { BookOpen, Video, HelpCircle, FileText } from "lucide-react";
 import Link from "next/link";
 
 import { DownloadDropdown } from "@/components/DownloadDropdown";

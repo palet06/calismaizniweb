@@ -9,159 +9,33 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
   FileText,
-  Users,
   Globe,
   Shield,
-  Clock,
   CheckCircle,
   AlertTriangle,
   Info,
   Building,
-  GraduationCap,
-  Briefcase,
   MapPin,
   Phone,
   Mail,
   Download,
-  ExternalLink,
   UserCheck,
-  Scale,
-  BookOpen,
   HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
+import {
+  applicationSteps,
+  employerRequirements,
+  exemptionCategories,
+  prohibitedProfessions,
+  workPermitTypes,
+} from "@/lib/worPermitData";
 
 export default function WorkPermitGuide() {
   const [activeTab, setActiveTab] = useState("overview");
 
-  const workPermitTypes = [
-    {
-      type: "Süreli-Bağımlı Çalışma İzni",
-      description:
-        "Belirli bir işverene bağlı olarak çalışmak için verilen, en çok bir yıla kadar geçerli izin",
-      duration: "En çok 1 yıl",
-      icon: <Clock className="w-6 h-6" />,
-      color: "bg-blue-100 text-blue-800",
-    },
-    {
-      type: "Süresiz Çalışma İzni",
-      description:
-        "İşverene bağlı olmaksızın süresiz çalışma ve ikamet hakkı veren izin",
-      duration: "Süresiz",
-      icon: <CheckCircle className="w-6 h-6" />,
-      color: "bg-green-100 text-green-800",
-    },
-    {
-      type: "Bağımsız Çalışma İzni",
-      description: "Kendi ad ve hesabına çalışma hakkı veren izin",
-      duration: "Değişken",
-      icon: <Briefcase className="w-6 h-6" />,
-      color: "bg-purple-100 text-purple-800",
-    },
-  ];
-
-  const exemptionCategories = [
-    {
-      category: "Bilimsel ve Kültürel Faaliyetler",
-      duration: "1 aya kadar",
-      description:
-        "Bilimsel, kültürel ve sanatsal faaliyetler kapsamında çalışacak yabancılar",
-      icon: <BookOpen className="w-5 h-5" />,
-    },
-    {
-      category: "Eğitim ve Montaj",
-      duration: "3 aya kadar",
-      description: "Makine montajı, bakım, onarım ve eğitim amaçlı çalışmalar",
-      icon: <GraduationCap className="w-5 h-5" />,
-    },
-    {
-      category: "Sportif Faaliyetler",
-      duration: "4 aya kadar",
-      description: "Profesyonel sporcu, antrenör ve spor elemanları",
-      icon: <Users className="w-5 h-5" />,
-    },
-    {
-      category: "Mevsimlik Tarım",
-      duration: "6 aya kadar",
-      description:
-        "Mevsimlik tarım ve hayvancılık işlerinde çalışacak yabancılar",
-      icon: <MapPin className="w-5 h-5" />,
-    },
-  ];
-
-  const employerRequirements = [
-    {
-      title: "Türk Çalışan İstihdamı",
-      requirement: "Her yabancıya karşılık en az 5 Türk vatandaşı",
-      icon: <Users className="w-5 h-5" />,
-      important: true,
-    },
-    {
-      title: "Sermaye Şartı",
-      requirement: "En az 100.000 TL sermaye",
-      icon: <Building className="w-5 h-5" />,
-      important: true,
-    },
-    {
-      title: "Ücret Standardı",
-      requirement: "Asgari ücretin altında ödeme yapılamaz",
-      icon: <Scale className="w-5 h-5" />,
-      important: false,
-    },
-    {
-      title: "Sosyal Güvenlik",
-      requirement: "SGK yükümlülüklerinin yerine getirilmesi",
-      icon: <Shield className="w-5 h-5" />,
-      important: true,
-    },
-  ];
-
-  const prohibitedProfessions = [
-    "Diş Tabipliği",
-    "Eczacılık",
-    "Veterinerlik",
-    "Avukatlık",
-    "Noterlik",
-    "Özel Güvenlik",
-    "Gümrük Müşavirliği",
-    "Turist Rehberliği",
-  ];
-
-  const applicationSteps = [
-    {
-      step: 1,
-      title: "Ön Hazırlık",
-      description:
-        "Gerekli belgelerin toplanması ve şartların kontrol edilmesi",
-      details: [
-        "Diploma ve denklik belgesi",
-        "Pasaport",
-        "İş sözleşmesi",
-        "İkamet izni (yurt içi başvuru)",
-      ],
-    },
-    {
-      step: 2,
-      title: "Online Başvuru",
-      description: "e-Devlet sistemi üzerinden başvuru yapılması",
-      details: [
-        "Başvuru formunun doldurulması",
-        "Belgelerin yüklenmesi",
-        "Başvuru ücretinin ödenmesi",
-      ],
-    },
-    
-    {
-      step: 3,
-      title: "Değerlendirme",
-      description: "Başvurunun uzman tarafından değerlendirilmesi",
-      details: ["Belge kontrolü", "Şartların incelenmesi", "Karar verilmesi"],
-    },
-  ];
-
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -181,7 +55,6 @@ export default function WorkPermitGuide() {
         </div>
       </section>
 
-      {/* Introduction */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -223,7 +96,6 @@ export default function WorkPermitGuide() {
         </div>
       </section>
 
-      {/* Main Content Tabs */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -233,11 +105,22 @@ export default function WorkPermitGuide() {
               className="w-full"
             >
               <TabsList className="grid w-full grid-cols-3 md:grid-cols-5 bg-gray-200 ">
-                <TabsTrigger className="cursor-pointer" value="overview">Genel Bakış</TabsTrigger>
-                <TabsTrigger className="cursor-pointer" value="types">İzin Türleri</TabsTrigger>
-                <TabsTrigger className="cursor-pointer" value="exemptions">Muafiyetler</TabsTrigger>
-                <TabsTrigger className="cursor-pointer" value="application">Başvuru</TabsTrigger>
-                <TabsTrigger className="cursor-pointer" value="responsibilities">
+                <TabsTrigger className="cursor-pointer" value="overview">
+                  Genel Bakış
+                </TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="types">
+                  İzin Türleri
+                </TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="exemptions">
+                  Muafiyetler
+                </TabsTrigger>
+                <TabsTrigger className="cursor-pointer" value="application">
+                  Başvuru
+                </TabsTrigger>
+                <TabsTrigger
+                  className="cursor-pointer"
+                  value="responsibilities"
+                >
                   Sorumluluklar
                 </TabsTrigger>
               </TabsList>
@@ -685,69 +568,6 @@ export default function WorkPermitGuide() {
         </div>
       </section>
 
-      {/* FAQ Section
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Sık Sorulan Sorular
-              </h2>
-              <p className="text-gray-600">En çok merak edilen konular</p>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                {
-                  question: "Çalışma izni başvurusu ne kadar sürer?",
-                  answer:
-                    "Başvurular genellikle 30 gün içinde değerlendirilir. Belge eksikliği durumunda süre uzayabilir.",
-                },
-                {
-                  question: "Çalışma izni ücreti ne kadar?",
-                  answer:
-                    "Ücretler izin türüne göre değişir. Güncel ücret tarifesi için Bakanlık web sitesini kontrol edin.",
-                },
-                {
-                  question: "Çalışma izni reddedilirse ne yapmalıyım?",
-                  answer:
-                    "30 gün içinde itiraz edebilir, olumsuz sonuç durumunda 60 gün içinde İdare Mahkemesi'ne başvurabilirsiniz.",
-                },
-                {
-                  question: "Aile üyelerim de çalışabilir mi?",
-                  answer:
-                    "Aile üyelerinin de ayrı çalışma izni alması gerekir. Aile birleşimi vizesi çalışma hakkı vermez.",
-                },
-              ].map((faq, index) => (
-                <Dialog key={index}>
-                  <DialogTrigger asChild>
-                    <Card className="cursor-pointer hover:shadow-md transition-shadow">
-                      <CardContent className="p-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="font-semibold text-gray-900">
-                            {faq.question}
-                          </h3>
-                          <ExternalLink className="w-5 h-5 text-gray-400" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>{faq.question}</DialogTitle>
-                      <DialogDescription className="text-base leading-relaxed">
-                        {faq.answer}
-                      </DialogDescription>
-                    </DialogHeader>
-                  </DialogContent>
-                </Dialog>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Contact and Support */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -808,7 +628,6 @@ export default function WorkPermitGuide() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">

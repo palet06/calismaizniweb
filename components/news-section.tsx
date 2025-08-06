@@ -5,7 +5,7 @@ import { Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function NewsSection() {
-  const news = [
+  const duyurular = [
     {
       id: 1,
       title:
@@ -68,7 +68,7 @@ export default function NewsSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {news.map((item) => (
+          {duyurular.map((item) => (
             <Card key={item.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">

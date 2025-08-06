@@ -2,16 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Building2,
-  Users,
-  FileText,
-  MessageCircle,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Building2, Users } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -30,7 +21,6 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-4 gap-6 ">
-          {/* Left Side - Contact Information (1/4) */}
           <div className="lg:col-span-1 space-y-4">
             <Card className="bg-white/95 backdrop-blur-sm shadow-2xl border-0">
               <CardContent className="p-6">
@@ -47,7 +37,6 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-4">
-                  {/* Ministry Name */}
                   <div className="flex items-start space-x-2">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <Building2 className="w-3 h-3 text-blue-600" />
@@ -63,7 +52,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Address */}
                   <div className="flex items-start space-x-2">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <MapPin className="w-3 h-3 text-blue-600" />
@@ -80,7 +68,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Email */}
                   <div className="flex items-start space-x-2">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <Mail className="w-3 h-3 text-blue-600" />
@@ -98,7 +85,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Phone */}
                   <div className="flex items-start space-x-2">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <Phone className="w-3 h-3 text-blue-600" />
@@ -116,7 +102,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Working Hours */}
                   <div className="flex items-start space-x-2">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <Clock className="w-3 h-3 text-blue-600" />
@@ -134,7 +119,6 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            {/* Additional Info Cards */}
             <div className="grid grid-cols-1">
               <Link href="https://www.alo170.gov.tr" target="_blank">
                 <Card className="bg-white/90 backdrop-blur-sm  hover:shadow-lg duration-300 transition-shadow">
@@ -150,7 +134,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side - Google Maps (3/4) */}
           <div className="lg:col-span-3">
             <Card className="h-full bg-white shadow-2xl border-0 overflow-hidden">
               <CardContent className="p-0 h-full">
@@ -167,7 +150,6 @@ export default function Contact() {
                     className="rounded-lg"
                   />
 
-                  {/* Map Overlay Info */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-xs">
                     <div className="flex items-center space-x-2 mb-1">
                       <MapPin className="w-4 h-4 text-blue-600" />
@@ -183,7 +165,6 @@ export default function Contact() {
                     </p>
                   </div>
 
-                  {/* Directions Button */}
                   <div className="absolute bottom-4 right-4">
                     <Button
                       className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg text-sm"

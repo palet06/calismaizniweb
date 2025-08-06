@@ -60,7 +60,7 @@ const slides = [
     title: "Hepatit hastalığı taşıyan vatandaşlarımızın her zaman yanındayız.",
 
     description:
-      "Genel Sağlık Sigortası kapsamında; Aşı ile ayakta ve yatarak tedavi giderlerini, Hepatit A aşı bedelini, Akut/kronik Hepatit B ve Hepatit C tedavisinde kullanılan ilaç bedellerini Sağlık Uygulama Tebliği (SUT) kapsamında karşılıyoruz." ,
+      "Genel Sağlık Sigortası kapsamında; Aşı ile ayakta ve yatarak tedavi giderlerini, Hepatit A aşı bedelini, Akut/kronik Hepatit B ve Hepatit C tedavisinde kullanılan ilaç bedellerini Sağlık Uygulama Tebliği (SUT) kapsamında karşılıyoruz.",
     image: "/tweet-5.png",
     imageAlt: "X Gönderisi",
     url: "https://x.com/isikhanvedat/status/1949712985460478025",
@@ -74,12 +74,10 @@ export function SocialSection2() {
 
   return (
     <section className="relative overflow-hidden py-16">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gray-50"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex flex-col items-center">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -91,11 +89,12 @@ export function SocialSection2() {
           </p>
         </div>
         <div className="w-full">
-          {/* Desktop View - 3 cards */}
           <div className="mx-auto max-w-6xl">
             {" "}
-            {/* Daha geniş alan */}
-            <Carousel className="w-full px-10 md:px-0" plugins={[plugin.current]}>
+            <Carousel
+              className="w-full px-10 md:px-0"
+              plugins={[plugin.current]}
+            >
               <CarouselContent>
                 {slides.map((slide, index) => (
                   <CarouselItem
@@ -131,10 +130,9 @@ export function SocialSection2() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              
-              <CarouselPrevious  className="bg-blue-900 text-white border-blue-600 border-2 ml-8 md:ml-0 " />
-              <CarouselNext  className="bg-blue-900 text-white border-blue-600  border-2 mr-8 md:mr-0"/>
-              
+
+              <CarouselPrevious className="bg-blue-900 text-white border-blue-600 border-2 ml-8 md:ml-0 " />
+              <CarouselNext className="bg-blue-900 text-white border-blue-600  border-2 mr-8 md:mr-0" />
             </Carousel>
           </div>
         </div>

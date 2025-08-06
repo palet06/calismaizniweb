@@ -22,7 +22,6 @@ import {
   Search,
   X,
   HelpCircle,
-  Globe,
   Mail,
   Phone,
   AlertCircle,
@@ -59,11 +58,11 @@ export default function FAQ() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+
     console.log("Form submitted:", formData);
-    // Reset form
+
     setFormData({ name: "", email: "", message: "" });
-    // Show success message (you could use a toast notification)
+
     alert(
       "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız."
     );
@@ -76,7 +75,6 @@ export default function FAQ() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -90,19 +88,16 @@ export default function FAQ() {
               Çalışma izni ile ilgili en çok merak edilen konular ve detaylı
               cevapları
             </p>
-         
           </div>
         </div>
       </section>
 
-      {/* Search and Filter Section */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card>
               <CardContent className="p-6">
                 <div className="space-y-4">
-                  {/* Search Input */}
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <Input
@@ -123,7 +118,6 @@ export default function FAQ() {
                     )}
                   </div>
 
-                  {/* Category Filter */}
                   <div className="flex flex-wrap gap-2">
                     {categories.map((category) => (
                       <Button
@@ -146,7 +140,6 @@ export default function FAQ() {
                     ))}
                   </div>
 
-                  {/* Active Filters */}
                   {(searchTerm || selectedCategory !== "all") && (
                     <div className="flex items-center space-x-2 pt-2 border-t">
                       <span className="text-sm text-gray-600">
@@ -198,7 +191,6 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -271,7 +263,6 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
@@ -346,8 +337,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Contact Information */}
-        <section className="py-12 bgbg-gray-50">
+      <section className="py-12 bgbg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">

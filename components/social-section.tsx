@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -26,7 +27,7 @@ const slides: SlideData[] = [
     imageAlt: "X Gönderisi",
     url: "https://x.com/csgbakanligi/status/1666837139751940096",
   },
- 
+
   {
     id: 2,
     title:
@@ -48,9 +49,8 @@ const slides: SlideData[] = [
   },
   {
     id: 4,
-    title: "Çalışma ve Sosyal Güvenlik Bakanımız Sayın Prof. Dr."
+    title: "Çalışma ve Sosyal Güvenlik Bakanımız Sayın Prof. Dr.",
 
-,
     description:
       "Çalışma ve Sosyal Güvenlik Bakanımız Sayın Prof. Dr Işıkhan Cumhurbaşkanı Yardımcımız Sayın Cevdet Yılmaz başkanlığında düzenlenen Ekonomi Koordinasyon Kurulu (EKK) toplantısına katıldı.",
     image: "/tweet-4.png",
@@ -63,7 +63,6 @@ export default function SocialSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
 
@@ -86,7 +85,6 @@ export default function SocialSection() {
     setCurrentSlide(index);
   };
 
-  // Calculate visible slides (show 3 at a time on desktop, 1 on mobile)
   const getVisibleSlides = () => {
     const visibleSlides = [];
     for (let i = 0; i < 3; i++) {
@@ -102,12 +100,10 @@ export default function SocialSection() {
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      {/* Background Image */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gray-50"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-8 h-full flex flex-col items-center">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -119,7 +115,6 @@ export default function SocialSection() {
           </p>
         </div>
         <div className="w-full">
-          {/* Desktop View - 3 cards */}
           <div className="hidden md:grid md:grid-cols-3  gap-6 md:size-4/5 mx-auto">
             {getVisibleSlides().map((slide, index) => (
               <Link
@@ -151,7 +146,6 @@ export default function SocialSection() {
             ))}
           </div>
 
-          {/* Mobile View - 1 card */}
           <div className="md:hidden">
             <Card className="bg-white/95 backdrop-blur-sm max-w-sm mx-auto">
               <CardContent className="p-0">
@@ -177,7 +171,6 @@ export default function SocialSection() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
       <Button
         variant="secondary"
         size="icon"
@@ -196,7 +189,6 @@ export default function SocialSection() {
         <ChevronRight className="w-6 h-6" />
       </Button>
 
-      {/* Dots Indicator */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20 ">
         <div className="flex space-x-2 ">
           {slides.map((_, index) => (

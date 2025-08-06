@@ -40,12 +40,12 @@ export function DownloadGuides() {
     if (!fileToDownload) return;
 
     const link = document.createElement("a");
-    link.href = fileToDownload; // public klasörü kök URL'den erişilebilir
-    link.download = fileToDownload; // İndirilecek dosyanın adı
+    link.href = fileToDownload;
+    link.download = fileToDownload;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-     setSelection("");
+    setSelection("");
   };
 
   return (
@@ -67,13 +67,15 @@ export function DownloadGuides() {
             e-İzin Yabancıların Çalışma İzinleri Başvuru Kılavuzu
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="gk-uygulama" className="cursor-pointer">
-            Geçici Koruma Sağlanan Yabancıların Çalışma İzinlerine Dair Uygulama Rehberi
+            Geçici Koruma Sağlanan Yabancıların Çalışma İzinlerine Dair Uygulama
+            Rehberi
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="akademisyen" className="cursor-pointer">
             Yabancı Akademisyenlerin Çalışma İzni Başvuru Kılavuzu
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="hayvancilik" className="cursor-pointer">
-            Hayvancılık İşletmelerinde İstihdam Edilecek Çoban ve Hayvan Bakıcıları İçin Çalışma İzni Başvuru Süreçleri
+            Hayvancılık İşletmelerinde İstihdam Edilecek Çoban ve Hayvan
+            Bakıcıları İçin Çalışma İzni Başvuru Süreçleri
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>

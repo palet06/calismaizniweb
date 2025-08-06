@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Mail, Search, TvMinimalPlay } from "lucide-react";
+import { Search, TvMinimalPlay } from "lucide-react";
 import { Input } from "./ui/input";
 
 const SearchSection = ({
@@ -14,7 +14,6 @@ const SearchSection = ({
 }) => {
   return (
     <div className={classNameProp}>
-      {/* Contact icons */}
       <div className={classNameProp2}>
         {/* <Button
           variant="ghost"

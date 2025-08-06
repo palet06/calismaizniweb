@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, Clock, CheckCircle } from "lucide-react";
+import { FileText } from "lucide-react";
 
 export default function ApplicationsSection() {
   return (

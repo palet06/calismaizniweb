@@ -27,8 +27,8 @@ const DownloadButton = ({
 }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = path ? path : ""; // public klasörü kök URL'den erişilebilir
-    link.download = fileName; // İndirilecek dosyanın adı
+    link.href = path ? path : "";
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -37,10 +37,14 @@ const DownloadButton = ({
     <Button
       variant={btnVariant ? btnVariant : "outline"}
       size={btnSize ? btnSize : "sm"}
-      className={btnClassName ? btnClassName : "flex flex-row gap-3 w-full bg-transparent"}
+      className={
+        btnClassName
+          ? btnClassName
+          : "flex flex-row gap-3 w-full bg-transparent"
+      }
       onClick={handleDownload}
     >
-        <Download className="w-4 h-4 text-black" />
+      <Download className="w-4 h-4 text-black" />
       İndir
     </Button>
   );

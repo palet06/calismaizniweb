@@ -18,111 +18,22 @@ import {
   Rocket,
   Users,
   Building2,
-  DollarSign,
-  Shield,
-  TrendingUp,
-  Heart,
-  Clock,
   MapPin,
-  Briefcase,
   Star,
   Globe,
-  Zap,
   Target,
   Award,
   ArrowRight,
   ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
+import { startupAdvantages, talentAdvantages } from "@/lib/techVisaData";
 
 export default function TechVisa() {
   const [activeTab, setActiveTab] = useState("startups");
 
-  const startupAdvantages = [
-    {
-      icon: <Clock className="w-8 h-8 text-blue-600" />,
-      title: "3 Yıllık Çalışma İzni",
-      description:
-        "Tech Visa kapsamında Türkiye'ye gelirken, çalışanlarını da rahatlıkla getirebilirsin. Yabancı personel çalıştırma izinlerinde bu programa özel istisnalar uyguluyoruz.",
-      details:
-        "Hem ortaklar hem de çalışanlar için geçerli olan bu istisna, ekip kurma sürecini hızlandırır.",
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-600" />,
-      title: "Hoş Geldin Danışmanlık Hizmeti",
-      description:
-        "Türkiye'de şirket kurma, vergi mevzuatı, ofis bulma, mentor buluşmaları ve devlet destekleri konularında ücretsiz danışmanlık.",
-      details:
-        "Türkiye misafirperverliği ile tüm startupları karşılıyoruz ve ihtiyaç duyduğunuz her konuda destek sağlıyoruz.",
-    },
-    {
-      icon: <Building2 className="w-8 h-8 text-purple-600" />,
-      title: "Teknoparklarda Ofis İmkanı",
-      description:
-        "Türkiye genelindeki yaklaşık 100 teknoparktan senin için en uygun olanında yer alman adına gerekli kolaylık sağlanacak.",
-      details:
-        "Teknoloji ekosisteminin bir parçası olmak için en etkili ve hızlı yol.",
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-yellow-600" />,
-      title: "Türkiye Tech Visa Fonu",
-      description:
-        "Programa dahil olan startuplara özel Türkiye Tech Visa Fon'u ile girişiminiz için finansman bulmak artık bir dert olmaktan çıkıyor.",
-      details:
-        "Tüm dünyada girişimlerin en büyük ihtiyaçlarından biri olan finansmana erişim sorunu çözülüyor.",
-    },
-    {
-      icon: <Award className="w-8 h-8 text-red-600" />,
-      title: "Devlet Desteklerinden Yararlanma",
-      description:
-        "Proje finansmanı, markalaşma desteği, yurt dışı pazarlara tanıtım desteği gibi hibe bazlı destekler sağlıyoruz.",
-      details:
-        "Türkiye, teknogirişimlerin kamu tarafından en fazla desteklendiği ülkelerden biri.",
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-indigo-600" />,
-      title: "Vergi Muafiyetleri",
-      description:
-        "Teknoparkta yer aldığında KDV, kurumlar vergisi, gümrük vergisi muafiyetleri. Çalışanlar da gelir vergisi ödemeyecek.",
-      details:
-        "Çalışanlara ödenmesi gereken primler için de teşvik uygulanıyor.",
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-pink-600" />,
-      title: "Sağlık Sisteminden Ücretsiz Yararlanma",
-      description:
-        "Tüm çalışanlar sağlık hizmetlerden ücretsiz yararlanabiliyor. Teknoloji firmalarının çalışanlarının sigorta primlerini devlet karşılıyor.",
-      details: "Türkiye'de etkin bir sağlık güvencesi sistemi var.",
-    },
-  ];
-
-  const talentAdvantages = [
-    {
-      icon: <Zap className="w-8 h-8 text-blue-600" />,
-      title: "Kolay ve Hızlı Çalışma Vizesi",
-      description:
-        "Çalışma vizesi başvuru sürecinde sana özel istisna uyguluyoruz.",
-      details: "Standart süreçlerden daha hızlı ve kolay başvuru imkanı.",
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-green-600" />,
-      title: "Gelir Vergisi Muafiyeti",
-      description:
-        "Türkiye'de Ar-Ge faaliyeti yürüten Türk şirketlerinde çalışman durumunda Gelir Vergisi ödemezsin.",
-      details: "Ar-Ge çalışanları için özel vergi avantajı.",
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-purple-600" />,
-      title: "Sosyal Güvenlik Teminatı",
-      description:
-        "Bütüncül sağlık hizmetlerini de kapsayan sosyal güvenlik primlerinin yarısını devlet karşılıyor.",
-      details: "Kapsamlı sosyal güvenlik sistemi ile güvence altında çalış.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -177,7 +88,6 @@ export default function TechVisa() {
         </div>
       </section>
 
-      {/* Istanbul Highlight */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -223,7 +133,6 @@ export default function TechVisa() {
         </div>
       </section>
 
-      {/* Main Content Tabs */}
       <section className="py-16 bg-gray-50 ">
         <div className="container mx-auto px-4 ">
           <Tabs
@@ -232,11 +141,17 @@ export default function TechVisa() {
             className="max-w-6xl mx-auto "
           >
             <TabsList className="grid w-full grid-cols-2 mb-12 h-auto ">
-              <TabsTrigger value="startups" className="text-lg py-4 cursor-pointer">
+              <TabsTrigger
+                value="startups"
+                className="text-lg py-4 cursor-pointer"
+              >
                 <Rocket className="w-5 h-5 mr-2" />
                 Startuplar İçin
               </TabsTrigger>
-              <TabsTrigger value="talents" className="text-lg py-4 cursor-pointer">
+              <TabsTrigger
+                value="talents"
+                className="text-lg py-4 cursor-pointer"
+              >
                 <Users className="w-5 h-5 mr-2" />
                 Yetenekler İçin
               </TabsTrigger>
@@ -369,7 +284,6 @@ export default function TechVisa() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -394,22 +308,25 @@ export default function TechVisa() {
                   Başvuru Yap
                 </Button>
               </Link>
-              <Link href="https://www.turkiyetechvisa.gov.tr/tr/danismanlik" target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 bg-transparent w-[200px]"
+              <Link
+                href="https://www.turkiyetechvisa.gov.tr/tr/danismanlik"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 bg-transparent w-[200px]"
                 >
-                <Globe className="w-5 h-5 mr-2" />
-                Danışmanlık Hizmetleri
-              </Button>
-                  </Link>
+                  <Globe className="w-5 h-5 mr-2" />
+                  Danışmanlık Hizmetleri
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Support Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

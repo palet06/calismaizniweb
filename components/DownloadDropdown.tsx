@@ -40,12 +40,12 @@ export function DownloadDropdown() {
     if (!fileToDownload) return;
 
     const link = document.createElement("a");
-    link.href = fileToDownload; // public klasörü kök URL'den erişilebilir
-    link.download = fileToDownload; // İndirilecek dosyanın adı
+    link.href = fileToDownload;
+    link.download = fileToDownload;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-     setSelection("");
+    setSelection("");
   };
 
   return (

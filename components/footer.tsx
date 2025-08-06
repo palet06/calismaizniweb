@@ -10,14 +10,14 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center justify-center">
-                <Link href="/home" >
-                <Image
-                  src="csgb-logo.svg"
-                  alt="CSGB Logo"
-                  width={64}
-                  height={64}
-                  priority
-                />
+                <Link href="/home">
+                  <Image
+                    src="csgb-logo.svg"
+                    alt="CSGB Logo"
+                    width={64}
+                    height={64}
+                    priority
+                  />
                 </Link>
               </div>
               <div>
@@ -32,29 +32,43 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Hızlı Linkler</h4>
             <ul className="space-y-2 text-blue-200">
-              
               <li>
-                <Link href="/#tech" className="hover:text-white transition-colors">
+                <Link
+                  href="/#tech"
+                  className="hover:text-white transition-colors"
+                >
                   TECHVISA
                 </Link>
               </li>
               <li>
-                <a href="/criteria" className="hover:text-white transition-colors">
+                <a
+                  href="/criteria"
+                  className="hover:text-white transition-colors"
+                >
                   Değerlendirme Kriterleri
                 </a>
               </li>
               <li>
-                <a href="annotations" className="hover:text-white transition-colors">
+                <a
+                  href="/annotations"
+                  className="hover:text-white transition-colors"
+                >
                   İzin Şerhleri
                 </a>
               </li>
               <li>
-                <a href="/restricted-professions" className="hover:text-white transition-colors">
+                <a
+                  href="/restricted-professions"
+                  className="hover:text-white transition-colors"
+                >
                   Kısıtlamalar
                 </a>
               </li>
               <li>
-                <a href="/statistics" className="hover:text-white transition-colors">
+                <a
+                  href="/statistics"
+                  className="hover:text-white transition-colors"
+                >
                   İstatistikler
                 </a>
               </li>
@@ -65,7 +79,11 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Destek</h4>
             <ul className="space-y-2 text-blue-200">
               <li>
-                <a href="https://www.alo170.gov.tr" target="_blank" className="hover:text-white transition-colors">
+                <a
+                  href="https://www.alo170.gov.tr"
+                  target="_blank"
+                  className="hover:text-white transition-colors"
+                >
                   Yardım Merkezi - ALO 170
                 </a>
               </li>
@@ -79,7 +97,6 @@ export default function Footer() {
                   İletişim
                 </a>
               </li>
-              
             </ul>
           </div>
 
@@ -146,7 +163,6 @@ export default function Footer() {
               >
                 Kullanım Şartları
               </a>
-              
             </div>
           </div>
         </div>
